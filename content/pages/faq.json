@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "title": "Foire aux questions",
+    "subtitle": "Nous vous informons",
+    "image": {
+      "alt": "F.A.Q. - Atelier Marmailles 974",
+      "src": "/images/hero.faq.jpg"
+    }
+  }
+}

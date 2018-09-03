@@ -1,0 +1,273 @@
+# PROPS
+x-imageProps: &imageProps
+  fields:
+    - { label: Source, name: src, widget: image }
+    - { label: Texte alternatif, name: alt, widget: string }
+
+# BASIC
+x-content: &content 
+  - { label: Contenu, name: content, widget: text }
+
+x-icon: &icon
+  - { label: Icône, name: icon, widget: string }
+
+x-image: &image
+  label: Image
+  name: image
+  widget: object
+  <<: *imageProps
+
+x-link: &link
+  - { label: Lien, name: link, widget: string } 
+
+x-richContent: &richContent 
+  - { label: Contenu, name: content, widget: markdown }
+
+x-subtitle: &subtitle 
+  - { label: Sous-titre, name: subtitle, widget: string }
+
+x-title: &title 
+  - { label: Titre, name: title, widget: string }
+
+x-value: &value 
+  - { label: Valeur, name: value, widget: string }
+
+# OBJECTS
+x-hero: &hero
+  label: Hero
+  name: hero
+  widget: object
+  fields:
+    - <<: *title
+    - <<: *subtitle
+    - <<: *image
+
+x-iconed: &iconed
+  widget: object
+  fields:
+    - <<: *icon
+    - <<: *value
+
+x-intro: &introduction
+  label: Introduction
+  name: introduction
+  widget: object
+  fields:
+    - <<: *title
+    - <<: *richContent
+    - <<: *image
+
+x-members: &members
+  label: Membres
+  name: members
+  widget: list
+  fields:
+    - { label: Nom, name: name, widget: string }
+    - { label: Role, name: role, widget: string }
+    - <<: *image
+
+x-menu: &menu
+  widget: list
+  allow_add: false
+  fields:
+    - { label: Identifiant, name: id, widget: string }
+    - { label: Label, name: label, widget: string }
+    - <<: *icon
+    - <<: *link
+    - { label: Exact, name: exact, widget: boolean, default: false }
+
+# CONFIG
+backend:
+  name: git-gateway
+
+media_folder: static/images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - file: content/options.json
+        label: Options
+        name: options
+        fields:
+          - label: Logo
+            name: logo
+            widget: object
+            <<: *imageProps
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - <<: *content
+              - label: Courriel
+                name: email
+                widget: object
+                fields:
+                  - { label: Type, name: type, widget: hidden, default: mailto }
+                  - <<: *icon
+                  - <<: *value
+              - label: Téléphone
+                name: phone
+                widget: object
+                fields:
+                  - { label: Type, name: type, widget: hidden, default: tel }
+                  - <<: *icon
+                  - <<: *value
+              - label: Adresse
+                name: address
+                widget: object
+                fields:
+                  - <<: *icon
+                  - { label: Rue, name: street, widget: string }
+                  - { label: Extra, name: extra, widget: string }
+                  - { label: Code postal, name: zipcode, widget: string }
+                  - { label: Ville, name: city, widget: string }
+                  - { label: Latitude, name: latitude, valueType: float, widget: number }
+                  - { label: Longitude, name: longitude, valueType: float, widget: number }
+              - label: Réseaux sociaux
+                name: social
+                widget: object
+                fields:
+                  - label: Facebook
+                    name: facebook
+                    <<: *iconed
+                  - label: Whatsapp
+                    name: whatsapp
+                    <<: *iconed
+                  - label: Viber
+                    name: viber
+                    <<: *iconed
+                  - label: Skype
+                    name: skype
+                    <<: *iconed
+                  - label: Messenger
+                    name: messenger
+                    <<: *iconed
+          - label: Menus
+            name: menus
+            widget: object
+            fields:
+              - label: Principal
+                name: main
+                <<: *menu
+              - label: Secondaire
+                name: secondary
+                <<: *menu
+      - file: content/pages/about.json
+        label: A propos
+        name: about
+        fields:
+          - <<: *hero
+          - <<: *members
+          - <<: *richContent
+      - file: content/pages/customer.json
+        label: Client
+        name: customer
+        fields:
+          - <<: *hero
+          - label: Livraison
+            name: shipping
+            widget: object
+            <<: *imageProps
+          - label: Réception
+            name: receipt
+            widget: object
+            <<: *imageProps
+          - label: Impressions
+            name: feedback
+            widget: object
+            <<: *imageProps
+      - file: content/pages/contact.json
+        label: Contact
+        name: contact
+        fields:
+          - <<: *hero
+      - file: content/pages/faq.json
+        label: F.A.Q.
+        name: faq
+        fields:
+          - <<: *hero
+      - file: content/pages/home.json
+        label: Accueil
+        name: home
+        fields:
+          - <<: *hero
+          - <<: *introduction
+      - file: content/pages/legale-notice.json
+        label: Mentions légales
+        name: legaleNotice
+        fields:
+          - <<: *hero
+      - file: content/pages/sitemap.json
+        label: Plan du site
+        name: plan
+        fields:
+          - <<: *hero
+      - file: content/pages/testimonies.json
+        label: Témoignages
+        name: testimonies
+        fields:
+          - <<: *hero
+          - <<: *introduction
+  - name: products
+    label: Produits
+    folder: content/products
+    create: true
+    extension: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - <<: *title
+      - <<: *subtitle
+      - { label: Date, name: date, widget: datetime }
+      - { label: Ordre, name: order, valueType: int, widget: number, default: 0 }
+      - { label: Nouveauté, name: isNew, widget: boolean, default: false }
+      - { label: Promotion, name: isDiscount, widget: boolean, default: false }
+      - { label: Propriétés, name: extras, widget: list }
+      - { label: Nombre de dessins, name: drawings, widget: string }
+      - label: Tarification
+        name: pricing
+        widget: object
+        fields:
+          - { label: Prix Cooperative, name: coop, valueType: float, widget: number }
+          - { label: Prix minimum, name: min, valueType: float, widget: number }
+          - { label: Prix maximum, name: max, valueType: float, widget: number }
+          - { label: Prix sélectionné, name: selected, valueType: float, widget: number }
+      - label: Colorisation
+        name: colorings
+        widget: list
+        fields:
+          - { label: Description, name: description, widget: string }
+          - { label: Couleurs, name: colors, widget: list }
+      - <<: *image
+      - label: Images
+        name: images
+        widget: list
+        <<: *imageProps
+  - name: questions
+    label: Questions
+    folder: content/questions
+    create: true
+    extension: json
+    slug: "{{slug}}"
+    fields:
+      - <<: *title
+      - { label: Section, name: section, valueType: int, widget: number }
+      - { label: Ordre, name: order, valueType: int, widget: number, default: 0 }
+      - <<: *richContent
+  - name: testimonies
+    label: Témoignages
+    folder: content/testimonies
+    create: true
+    extension: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - <<: *title
+      - { label: Date, name: date, widget: date }
+      - { label: Auteur, name: from, widget: string }
+      - <<: *content
+      - <<: *image

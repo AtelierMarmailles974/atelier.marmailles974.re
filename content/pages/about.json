@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "Qui sommes-nous?",
+    "subtitle": "Découvrez notre équipe",
+    "image": {
+      "src": "/images/hero.about.jpg",
+      "alt": "A propos - Atelier Marmailles 974"
+    }
+  },
+  "members": [
+    {
+      "name": "Laurent",
+      "role": "Responsable Logistique",
+      "image": {
+        "src": "/images/member.laurent.jpg",
+        "alt": "Laurent - Atelier Marmailles 974"
+      }
+    },
+    {
+      "name": "Michael",
+      "role": "Responsable Création",
+      "image": {
+        "src": "/images/member.michael.jpg",
+        "alt": "Michael - Atelier Marmailles 974"
+      }
+    },
+    {
+      "name": "Eric",
+      "role": "Responsable Fabrication",
+      "image": {
+        "src": "/images/member.eric.jpg",
+        "alt": "Eric - Atelier Marmailles 974"
+      }
+    }
+  ],
+  "content": "<span class=\"atelier\">atelier</span> <span class=\"marmailles\">marmailles</span> travaille depuis de nombreuses années avec les établissements scolaires et les parents d’élèves sur l’ensemble de la Réunion. <span class=\"atelier\">atelier</span> <span class=\"marmailles\">marmailles</span> et son équipe de collaborateurs vous offrent un accompagnement personnalisé.\r\n<br></br>\r\nL’objectif de <span class=\"atelier\">atelier</span> <span class=\"marmailles\">marmailles</span> est de mettre tout en œuvre pour que vous puissiez réaliser votre projet sans contraintes et dans les meilleures conditions. Ceci grâce à <span class=\"orange bold\">la vente d’objets personnalisés par les enfants</span> qui séduiront Parents, Familles et Amis.\r\n<br></br>\r\n<p class=\"emphasize\">Trouver des solutions de financement pour vos projets est notre métier !</p>"
+}

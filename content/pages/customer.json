@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "title": "Vous avez passé commande",
+    "subtitle": "Que faire maintenant ?",
+    "image": {
+      "alt": "Client - Atelier Marmailles 974",
+      "src": "/images/hero.customer.jpg"
+    }
+  },
+  "shipping": {
+    "alt": "Livraison - Atelier Marmailles 974",
+    "src": "/images/customer.shipping.jpg"
+  },
+  "receipt": {
+    "alt": "Réception - Atelier Marmailles 974",
+    "src": "/images/customer.receipt.jpg"
+  },
+  "feedback": {
+    "alt": "Impressions - Atelier Marmailles 974",
+    "src": "/images/customer.feedback.jpg"
+  }
+}

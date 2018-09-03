@@ -1,0 +1,90 @@
+{
+  "logo": {
+    "src": "/images/logo.png",
+    "alt": "Logo - Atelier Marmailles 974"
+  },
+  "contact": {
+    "content": "Pour en savoir plus sur nos produits ou nous faire part d’une idée de projet intéressant, vous pouvez nous contacter :",
+    "email": {
+      "type": "mailto",
+      "icon": "envelope",
+      "value": "contact@atelier.marmailles974.re"
+    },
+    "phone": {
+      "type": "tel",
+      "icon": "phone",
+      "value": "06 93 20 55 10"
+    },
+    "address": {
+      "icon": "map-marker-alt",
+      "street": "9 Rue de l’Etang",
+      "extra": "Z.I. Bel Air – Atelier n°11",
+      "zipcode": "97450",
+      "city": "SAINT-LOUIS",
+      "latitude": -21.289185,
+      "longitude": 55.399272
+    },
+    "social": {
+      "facebook": { "icon": "facebook-f", "value": "https://www.facebook.com/marmailles974/" },
+      "whatsapp": { "icon": "whatsapp", "value": "https://www.facebook.com/marmailles974/" },
+      "viber": { "icon": "viber", "value": "https://www.facebook.com/marmailles974/" },
+      "skype": { "icon": "skype", "value": "https://www.facebook.com/marmailles974/" },
+      "messenger": { "icon": "facebook-messenger", "value": "https://www.facebook.com/marmailles974/" }
+    }
+  },
+  "menus": {
+    "main": [
+      {
+        "id": "home",
+        "icon": "home",
+        "label": "Accueil",
+        "link": "/",
+        "exact": true
+      },
+      {
+        "id": "about",
+        "label": "A propos",
+        "link": "/a-propos",
+        "exact": false
+      },
+      {
+        "id": "faq",
+        "label": "F.A.Q.",
+        "link": "/faq",
+        "exact": false
+      },
+      {
+        "id": "contact",
+        "label": "Contact",
+        "link": "/contact",
+        "exact": false
+      },
+      {
+        "id": "comments",
+        "label": "Témoignages",
+        "link": "/temoignages",
+        "exact": false
+      },
+      {
+        "id": "client",
+        "label": "Client",
+        "link": "/client",
+        "exact": false
+      }
+    ],
+    "secondary": [
+      {
+        "id": "sitemap",
+        "label": "Plan du site",
+        "link": "/plan",
+        "exact": false
+      },
+      {
+        "id": "legaleNotice",
+        "label": "Mentions Légales",
+        "link": "/mentions-legales",
+        "exact": false
+      }
+    ]
+  }
+}

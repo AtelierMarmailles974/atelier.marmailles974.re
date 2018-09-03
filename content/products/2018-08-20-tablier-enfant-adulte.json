@@ -1,0 +1,52 @@
+{
+  "pricing": {
+    "coop": 6.5,
+    "min": 8,
+    "max": 15,
+    "selected": 10
+  },
+  "isDiscount": false,
+  "order": 15,
+  "date": "2018-08-20T21:08:56+04:00",
+  "extras": [
+    "Couture des quatre bords",
+    "Finition Premium",
+    "Dimensions Enfant : 48 x 61 cm",
+    "Dimensions Adulte : 56 x 72 cm"
+  ],
+  "colorings": [
+    {
+      "description": "Tablier",
+      "colors": [
+        "red"
+      ]
+    },
+    {
+      "description": "Dessins",
+      "colors": [
+        "#777777"
+      ]
+    }
+  ],
+  "drawings": "170",
+  "isNew": true,
+  "subtitle": "Profitez de notre Prix Unique",
+  "title": "Tablier Enfant & Adulte",
+  "image": {
+    "src": "/images/product.tablier-enfant-adulte.jpg"
+  },
+  "images": [
+    {
+      "src": "/images/product.tablier-enfant-adulte.01.jpg"
+    },
+    {
+      "src": "/images/product.tablier-enfant-adulte.02.jpg"
+    },
+    {
+      "src": "/images/product.tablier-enfant-adulte.03.jpg"
+    },
+    {
+      "src": "/images/product.tablier-enfant-adulte.04.jpg"
+    }
+  ]
+}

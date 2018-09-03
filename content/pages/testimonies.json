@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Témoignages",
+    "subtitle": "Ils nous ont fait confiance",
+    "image": {
+      "alt": "Témoignages - Atelier Marmailles 974",
+      "src": "/images/hero.testimonies.jpg"
+    }
+  },
+  "introduction": {
+    "title": "Atelier Marmailles, à votre écoute !",
+    "content": "",
+    "image": {
+      "src": "/images/intro.testimonies.jpg",
+      "alt": "Satisfaction - Atelier Marmailles 974"
+    }
+  }
+}
