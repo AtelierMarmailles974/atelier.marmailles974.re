@@ -1,9 +1,12 @@
 import { DateTime } from 'luxon';
-import qs from 'qs';
 import Sib from 'sendinblue-v3-node-client';
 
+require('dotenv').config();
+
 exports.handler = function(event, context, callback) {
-  const fdata = qs.parse(event.body, { charset: 'utf-8' });
+  if(event.httpMethod !== 'POST' || !event.body) callback(null, { statusCode: 200, body: 'false' });
+  
+  const data = JSON.parse(event.body);
 
   const customerEmail = {
     htmlContent: `
@@ -21,12 +24,12 @@ exports.handler = function(event, context, callback) {
       <li><b>Observations :</b> ${fdata.comments}</li>
     </ul>	
     `,
-    sender: { email: 'no-reply@atelier.marmailles974.re' },
+    sender: { email: 'no-reply@ateliermarmailles974.re' },
     subject: `SITE ATELIER MARMAILLES 974 : Accusé de Réception - BL N°${fdata.id}`,
-    to: [{ email: 'gregory.bouteiller@niama.re' }],
+    to: [{ email: 'admin@ateliermarmailles974.re' }],
   };
 
-  const client = new Sib('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');
+  const client = new Sib(process.env.SEND_IN_BLUE_API_KEY);
 
   client.smtp.transactionals
     .send(customerEmail)

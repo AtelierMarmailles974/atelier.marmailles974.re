@@ -5,7 +5,7 @@ module.exports = {
     },
   },
   axios: {
-    proxy: true,
+    proxy: process.env.NODE_ENV !== 'production',
     retry: { retries: 3 },
   },
   build: {
@@ -69,7 +69,16 @@ module.exports = {
   head: {
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   },
-  modules: ['nuxt-typescript', '@nuxtjs/apollo', '@nuxtjs/axios', 'nuxt-element-ui', 'nuxt-google-maps', 'nuxt-fontawesome', 'nuxt-fela'],
+  modules: [
+    '@nuxtjs/apollo',
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
+    'nuxt-element-ui',
+    'nuxt-fela',
+    'nuxt-fontawesome',
+    'nuxt-google-maps',
+    'nuxt-typescript',
+  ],
   plugins: [{ src: '~/plugins/lazysizes.ts', ssr: false }, '~/plugins/ui.ts'],
   proxy: {
     '/.netlify/functions': {
