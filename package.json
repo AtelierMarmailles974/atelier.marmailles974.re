@@ -9,7 +9,7 @@
     "dev:server": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "npm-run-all --parallel generate:function generate:server",
+    "generate": "npm-run-all --parallel generate:functions generate:server",
     "generate:functions": "netlify-lambda build functions/src",
     "generate:server": "nuxt generate"
   },
