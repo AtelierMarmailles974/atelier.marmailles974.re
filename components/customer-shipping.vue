@@ -1,16 +1,18 @@
 <template lang="pug">
 include ../styles/mixins
 v-section(title="Votre atelier dessin est terminé ?", ct="greyVVL")
-  +el-form('Form')(ref="form", name="shipping", netlify, :model="form", :rules="validations", label-position="left", :show-message="false",
+  +el-form('Form')(ref="form", name="shipping", netlify, :model="fdata", :rules="validations", label-position="left", :show-message="false",
   status-icon)
     +div('Switches')
       +p('Description') Avant de déplacer notre transporteur merci à vous de vérifier et de valider les points suivants :
       +el-form-item('Item$switch')(v-for="s of switches", :key="s.id", :prop="s.id")
-        el-switch(v-model="form[s.id]", :active-text="s.label", :active-color="$theme.colors.green", :inactive-color="$theme.colors.red")
+        el-switch(v-model="fdata[s.id]", :active-text="s.label", :active-color="$theme.colors.green", :inactive-color="$theme.colors.red")
     +el-form-item('Item$date').el-form-item--date(label="Merci de m'indiquer la date que vous avez fixée aux parents pour le retour des bons de commande :", prop="date", :required="true") 
-      el-date-picker(v-model="form.date", :clearable="false", format="dd-MM-yyyy", :picker-options="pickerOptions")
+      el-date-picker(v-model="fdata.date", :clearable="false", format="dd-MM-yyyy", :picker-options="pickerOptions")
+    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="email", required, :label-width="observationWidth")
+      el-input(v-model="fdata.email"): i.el-input__icon.el-icon-message(slot="prefix")
     el-form-item(label="Observations :", :label-width="observationWidth", prop="comments", :required="false")
-      el-input(v-model="form.comments", type="textarea", :rows="4" )
+      el-input(v-model="fdata.comments", type="textarea", :rows="4" )
     +div('Row')
       +img('Image').lazyload(v-bind="image")
       div
@@ -26,6 +28,7 @@ v-section(title="Votre atelier dessin est terminé ?", ct="greyVVL")
 <script lang="ts">
 import { Form } from 'element-ui';
 import { Component, FelaMixin, mixins, Rules, Vue } from 'nuxt-fela';
+import qs from 'qs';
 
 import { shipping } from '~/content/pages/customer.json';
 import { Image } from '~/definitions';
@@ -59,12 +62,13 @@ export default class CustomerShipping extends mixins(FelaMixin, BreakpointMixin,
     { id: 'count', label: `Le total de dessins réalisés sur l’enveloppe correspond au nombre de cartes dans celle-ci` },
   ];
 
-  form = {
+  fdata = {
     binding: false,
     color: false,
     comments: '',
     count: false,
     date: Date.now(),
+    email: '',
     envelope: false,
     name: false,
     pupils: false,
@@ -89,7 +93,7 @@ export default class CustomerShipping extends mixins(FelaMixin, BreakpointMixin,
   }
 
   get observationWidth(): string {
-    return this.breakpoint < 2 ? 'auto' : '7rem';
+    return this.breakpoint < 2 ? 'auto' : '8rem';
   }
 
   get submitLabel() {
@@ -111,11 +115,14 @@ export default class CustomerShipping extends mixins(FelaMixin, BreakpointMixin,
   protected async _validate(isValid: boolean) {
     if (!isValid) return this.$message.error('Certains champs sont invalides.');
     this.isProcessing = true;
-    await new Promise((r) => setTimeout(r, 2000));
-    // await this.$axios.post(this.$refs.form.$attrs.action, qs.stringify(this.form));
+    try {
+      await this.$axios.post('/.netlify/functions/shipping', qs.stringify(this.fdata));
+      this.$message.success('Votre message a été envoyé avec succès.');
+      this.$refs.form.resetFields();
+    } catch (error) {
+      this.$message.error("Une erreur est survenue durant l'envoi. Veuillez réessayer ultérieurement.");
+    }
     this.isProcessing = false;
-    this['$message'].success('Votre message a été envoyé avec succès.');
-    this.$refs.form.resetFields();
   }
 
   // =================================================================================================================================

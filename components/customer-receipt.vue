@@ -8,6 +8,8 @@ v-section(title="Vous avez reçu votre commande ?", ct="greyVVL")
         el-input(v-model="fdata.name")
       el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="school", :required="true")
         el-input(v-model="fdata.school")
+    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="email", :required="true"): el-input(v-model="fdata.email")
+      i.el-input__icon.el-icon-message(slot="prefix")
     el-row
       el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="city", :required="true") 
         el-input(v-model="fdata.city")
@@ -55,6 +57,7 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
     city: '',
     comments: '',
     count: 10,
+    email: '',
     id: '',
     name: '',
     phone: '',
@@ -65,6 +68,7 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
   isProcessing = false;
 
   validations = {
+    email: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
     sign: [{ validator: (_, v, cb) => cb(v ? undefined : new Error('required')) }],
   };
 
@@ -122,6 +126,7 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
     Icon: { mr: 2 },
     Image: { mr: { xs: 4 }, mb: 4, flex: 0, w: 16 },
     Item: { mb: '0.25rem!important' },
+    Item$email: { maxW: 56.5 },
     Item$submit: { mt: 8, textAlign: 'center' },
     Phone: { w: { xs: '10rem!important' } },
     Row: { col: true, row: { xs: true }, ai: 'center' },

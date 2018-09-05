@@ -1,23 +1,25 @@
 <template lang="pug">
 include ../styles/mixins
 v-section(title="Etes-vous satisfait de nos services ?", ct="greyVVL")
-  +el-form('Form')(ref="form", :model="form", :label-width="labelWidth", :show-message="false", status-icon)
+  +el-form('Form')(ref="form", :model="fdata", :label-width="labelWidth", :rules="validations", :show-message="false", status-icon)
     el-row
       el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre nom :", prop="name", :required="true")
-        el-input(v-model="form.name")
+        el-input(v-model="fdata.name")
       el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="school", :required="true")
-        el-input(v-model="form.school")
+        el-input(v-model="fdata.school")
+    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="email", :required="true"): el-input(v-model="fdata.email")
+      i.el-input__icon.el-icon-message(slot="prefix")
     el-row
       el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="city", :required="true") 
-        el-input(v-model="form.city")
+        el-input(v-model="fdata.city")
       el-col(:span="24", :md="12"): +el-form-item('Item')(label="Téléphone :", prop="phone", :required="true")    
-        +el-input('Phone')(v-model="form.phone", maxlength="10"): i.el-input__icon.el-icon-phone(slot="prefix")
+        +el-input('Phone')(v-model="fdata.phone", maxlength="10"): i.el-input__icon.el-icon-phone(slot="prefix")
     +div('Rates').customer-feedback-rates
-      +el-form-item('Item$rate')(label="Le projet était-il facile à réaliser ?"): el-rate(v-model="form.ease")
-      +el-form-item('Item$rate')(label="Quel est votre degré de satisfaction ?"): el-rate(v-model="form.customer")
-      +el-form-item('Item$rate')(label="Quel est le degré de satisfaction des parents ?"): el-rate(v-model="form.parents")
+      +el-form-item('Item$rate')(label="Le projet était-il facile à réaliser ?"): el-rate(v-model="fdata.ease")
+      +el-form-item('Item$rate')(label="Quel est votre degré de satisfaction ?"): el-rate(v-model="fdata.customer")
+      +el-form-item('Item$rate')(label="Quel est le degré de satisfaction des parents ?"): el-rate(v-model="fdata.parents")
       +el-form-item('Item$rate')(label="Ce type de projet devrait-il être réédité tous les ans avec un produit différent?") 
-        el-radio-group(v-model="form.renew", :fill="activeColor")
+        el-radio-group(v-model="fdata.renew", :fill="activeColor")
           el-radio(label="Oui") Oui
           el-radio(label="Non") Non
           el-radio(label="Peut-être") Peut-être
@@ -25,7 +27,7 @@ v-section(title="Etes-vous satisfait de nos services ?", ct="greyVVL")
       +img('Image').lazyload(v-bind="image")
       +div('Wrapper')
         el-form-item(label="Observations :", label-width="auto")
-          el-input(type="textarea", :rows="3", placeholder="Votre commentaire...",v-model="form.comment")
+          el-input(type="textarea", :rows="3", placeholder="Votre commentaire...",v-model="fdata.comments")
         +el-form-item('Item$submit')(label-width="auto"): el-button(type="primary", :loading="isProcessing", @click="submit")
           +fa-icon('Icon')(v-if="!isProcessing", icon="paper-plane")
           span {{ submitLabel }}
@@ -51,10 +53,11 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
     form: Form;
   };
 
-  form = {
+  fdata = {
     city: '',
     customer: 0,
-    comment: '',
+    comments: '',
+    email: '',
     name: '',
     parents: 0,
     phone: '',
@@ -64,6 +67,10 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
   };
 
   isProcessing = false;
+
+  validations = {
+    email: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
+  };
 
   get activeColor(): string {
     return this.$theme.colors[this.color];
@@ -118,6 +125,7 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
     Icon: { mr: 2 },
     Image: { mr: { xs: 4 }, mb: 4, flex: 0, w: 16 },
     Item: { mb: '0.25rem!important' },
+    Item$email: { maxW: 53.5 },
     Item$rate: { mb: { base: '1rem!important', md: '0!important' }, row: true, wrap: true },
     Item$submit: { mt: 8, textAlign: 'center' },
     Phone: { w: { xs: '10rem!important' } },

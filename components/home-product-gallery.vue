@@ -88,7 +88,7 @@ export default class HomeProductGallery extends mixins(FelaMixin, ColorMixin) {
     Images: ({ active }): S => ({ row: 'stretch', transform: `translateX(-${active}00%)`, transition: 'all 0.2s' }),
     Mask: { fix: 9, row: true, jc: 'center', bgC: 'black50' },
     Mask$wrapper: { relative: true },
-    Selection: { maxW: '90vw', maxH: '90vh', bW: 8, bS: 'solid', bC: 'white' },
+    Selection: { maxW: '90vw', maxH: '90vh', bW: 8, bS: 'solid', bC: 'white', tr: 'all 0.3s' },
   };
 }
 </script>
