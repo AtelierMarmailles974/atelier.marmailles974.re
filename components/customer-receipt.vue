@@ -4,24 +4,26 @@ v-section(title="Vous avez reçu votre commande ?", ct="greyVVL")
   +el-form('Form')(ref="form", :model="fdata", :label-width="labelWidth", :rules="validations", :show-message="false", status-icon)
     +p('Description') Nous vous prions de vien vouloir accuser réception de votre commande en remplissant le formulaire suivant : 
     el-row
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre nom :", prop="name", :required="true")
-        el-input(v-model="fdata.name")
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="school", :required="true")
-        el-input(v-model="fdata.school")
-    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="email", :required="true"): el-input(v-model="fdata.email")
-      i.el-input__icon.el-icon-message(slot="prefix")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre nom :", prop="NAME", required)
+        el-input(v-model="fdata.NAME", placeholder="Votre nom...")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="SCHOOL", required)
+        el-input(v-model="fdata.SCHOOL", placeholder="Votre école...")
+    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="EMAIL", required) 
+      el-input(v-model="fdata.EMAIL", placeholder="Votre courriel..."): i.el-input__icon.el-icon-message(slot="prefix")
     el-row
-      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="city", :required="true") 
-        el-input(v-model="fdata.city")
-      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Téléphone :", prop="phone", :required="true")    
-        +el-input('Phone')(v-model="fdata.phone", maxlength="10"): i.el-input__icon.el-icon-phone(slot="prefix")   
+      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="CITY", required) 
+        el-input(v-model="fdata.CITY", placeholder="Votre ville...")
+      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Téléphone :", prop="PHONE", required)    
+        +el-input('Phone')(v-model="fdata.PHONE", placeholder="Votre téléphone...", maxlength="10") 
+          i.el-input__icon.el-icon-phone(slot="prefix")  
     el-row  
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="N° du bon de livraison :", prop="id", :required="true")
-        el-input(v-model="fdata.id")
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Quantité livrée :", prop="count", :required="true")
-        +el-input-number('Count')(v-model="fdata.count", controls-position="right", :max="9999", :min="1", :step="10")
-    +el-form-item('Item')(label="Observations :"): el-input(v-model="fdata.comments", type="textarea", :rows="4")
-    el-form-item(prop="sign", :required="true")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="N° du bon de livraison :", prop="ID", required)
+        el-input(v-model="fdata.ID", placeholder="Numéro du bon...")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Quantité livrée :", prop="COUNT", required)
+        +el-input-number('Count')(v-model="fdata.COUNT", controls-position="right", :max="9999", :min="1", :step="10")
+    +el-form-item('Item')(label="Observations :", prop="COMMENTS")
+      el-input(v-model="fdata.COMMENTS", type="textarea", placeholder="Vos observations...", :rows="4")
+    el-form-item(prop="sign", required)
       el-switch(v-model="fdata.sign", active-text="Je reconnais avoir bien reçu les produits de ma commande.", 
       :active-color="$theme.colors.green", :inactive-color="$theme.colors.red")
     +div('Row')
@@ -54,21 +56,21 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
   };
 
   fdata = {
-    city: '',
-    comments: '',
-    count: 10,
-    email: '',
-    id: '',
-    name: '',
-    phone: '',
-    school: '',
+    CITY: '',
+    COMMENTS: '',
+    COUNT: 10,
+    EMAIL: '',
+    ID: '',
+    NAME: '',
+    PHONE: '',
+    SCHOOL: '',
     sign: false,
   };
 
   isProcessing = false;
 
   validations = {
-    email: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
+    EMAIL: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
     sign: [{ validator: (_, v, cb) => cb(v ? undefined : new Error('required')) }],
   };
 
@@ -106,7 +108,13 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
     if (!isValid) return this.$message.error('Certains champs sont invalides.');
     this.isProcessing = true;
     try {
-      await this.$axios.post('/.netlify/functions/receipt', qs.stringify(this.fdata));
+      await this.$axios.post(
+        '/.netlify/functions/emails',
+        qs.stringify([
+          { templateId: 8, args: { attributes: this.fdata, emailTo: ['admin@ateliermarmailles974.re'] } },
+          { templateId: 9, args: { emailTo: [this.fdata.EMAIL] } },
+        ])
+      );
       this.$message.success('Votre message a été envoyé avec succès.');
       this.$refs.form.resetFields();
     } catch (error) {
@@ -126,9 +134,9 @@ export default class CustomerReceipt extends mixins(FelaMixin, BreakpointMixin) 
     Icon: { mr: 2 },
     Image: { mr: { xs: 4 }, mb: 4, flex: 0, w: 16 },
     Item: { mb: '0.25rem!important' },
-    Item$email: { maxW: 56.5 },
+    Item$email: { maxW: 57.5 },
     Item$submit: { mt: 8, textAlign: 'center' },
-    Phone: { w: { xs: '10rem!important' } },
+    Phone: { w: { xs: '11rem!important' } },
     Row: { col: true, row: { xs: true }, ai: 'center' },
     Wrapper: { flex: 1 },
   };

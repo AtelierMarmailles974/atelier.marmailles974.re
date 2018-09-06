@@ -3,31 +3,32 @@ include ../styles/mixins
 v-section(title="Etes-vous satisfait de nos services ?", ct="greyVVL")
   +el-form('Form')(ref="form", :model="fdata", :label-width="labelWidth", :rules="validations", :show-message="false", status-icon)
     el-row
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre nom :", prop="name", :required="true")
-        el-input(v-model="fdata.name")
-      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="school", :required="true")
-        el-input(v-model="fdata.school")
-    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="email", :required="true"): el-input(v-model="fdata.email")
-      i.el-input__icon.el-icon-message(slot="prefix")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre nom :", prop="NAME", required)
+        el-input(v-model="fdata.NAME", placeholder="Votre nom...")
+      el-col(:span="24",:md="12"): +el-form-item('Item')(label="Votre école :", prop="SCHOOL", required)
+        el-input(v-model="fdata.SCHOOL", placeholder="Votre école...")
+    +el-form-item(['Item','Item$email'])(label="Votre courriel :", prop="EMAIL", required) 
+      el-input(v-model="fdata.EMAIL", placeholder="Votre courriel..."): i.el-input__icon.el-icon-message(slot="prefix")
     el-row
-      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="city", :required="true") 
-        el-input(v-model="fdata.city")
-      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Téléphone :", prop="phone", :required="true")    
-        +el-input('Phone')(v-model="fdata.phone", maxlength="10"): i.el-input__icon.el-icon-phone(slot="prefix")
+      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Ville :", prop="CITY", required) 
+        el-input(v-model="fdata.CITY", placeholder="Votre ville...")
+      el-col(:span="24", :md="12"): +el-form-item('Item')(label="Téléphone :", prop="PHONE", required)    
+        +el-input('Phone')(v-model="fdata.PHONE", placeholder="Votre téléphone...", maxlength="10") 
+          i.el-input__icon.el-icon-phone(slot="prefix")
     +div('Rates').customer-feedback-rates
-      +el-form-item('Item$rate')(label="Le projet était-il facile à réaliser ?"): el-rate(v-model="fdata.ease")
-      +el-form-item('Item$rate')(label="Quel est votre degré de satisfaction ?"): el-rate(v-model="fdata.customer")
-      +el-form-item('Item$rate')(label="Quel est le degré de satisfaction des parents ?"): el-rate(v-model="fdata.parents")
-      +el-form-item('Item$rate')(label="Ce type de projet devrait-il être réédité tous les ans avec un produit différent?") 
-        el-radio-group(v-model="fdata.renew", :fill="activeColor")
+      +el-form-item('Item$rate')(label="Le projet était-il facile à réaliser ?", prop="EASE"): el-rate(v-model="fdata.EASE")
+      +el-form-item('Item$rate')(label="Quel est votre degré de satisfaction ?", prop="CUSTOMER"): el-rate(v-model="fdata.CUSTOMER")
+      +el-form-item('Item$rate')(label="Quel est le degré de satisfaction des parents ?", prop="PARENTS"): el-rate(v-model="fdata.PARENTS")
+      +el-form-item('Item$rate')(label="Ce type de projet devrait-il être réédité tous les ans avec un produit différent?", prop="RENEW") 
+        el-radio-group(v-model="fdata.RENEW", :fill="activeColor")
           el-radio(label="Oui") Oui
           el-radio(label="Non") Non
           el-radio(label="Peut-être") Peut-être
     +div('Row')
       +img('Image').lazyload(v-bind="image")
       +div('Wrapper')
-        el-form-item(label="Observations :", label-width="auto")
-          el-input(type="textarea", :rows="3", placeholder="Votre commentaire...",v-model="fdata.comments")
+        el-form-item(label="Observations :", prop="COMMENTS", label-width="auto")
+          el-input(type="textarea", :rows="4", placeholder="Vos observations...",v-model="fdata.COMMENTS")
         +el-form-item('Item$submit')(label-width="auto"): el-button(type="primary", :loading="isProcessing", @click="submit")
           +fa-icon('Icon')(v-if="!isProcessing", icon="paper-plane")
           span {{ submitLabel }}
@@ -37,6 +38,7 @@ v-section(title="Etes-vous satisfait de nos services ?", ct="greyVVL")
 <script lang="ts">
 import { Form } from 'element-ui';
 import { Component, FelaMixin, mixins, Rules, Vue } from 'nuxt-fela';
+import qs from 'qs';
 
 import { feedback } from '~/content/pages/customer.json';
 import { Image } from '~/definitions';
@@ -54,22 +56,22 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
   };
 
   fdata = {
-    city: '',
-    customer: 0,
-    comments: '',
-    email: '',
-    name: '',
-    parents: 0,
-    phone: '',
-    ease: 0,
-    renew: 'Oui',
-    school: '',
+    CITY: '',
+    CUSTOMER: 0,
+    COMMENTS: '',
+    EASE: 0,
+    EMAIL: '',
+    NAME: '',
+    PARENTS: 0,
+    PHONE: '',
+    RENEW: 'Oui',
+    SCHOOL: '',
   };
 
   isProcessing = false;
 
   validations = {
-    email: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
+    EMAIL: [{ required: true, message: 'Ce champ est requis.' }, { type: 'email', message: 'Le courriel est invalide.' }],
   };
 
   get activeColor(): string {
@@ -109,11 +111,20 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
   protected async _validate(isValid: boolean) {
     if (!isValid) return this.$message.error('Certains champs sont invalides.');
     this.isProcessing = true;
-    await new Promise((r) => setTimeout(r, 2000));
-    // await this.$axios.post(this.$refs.form.$attrs.action, qs.stringify(this.form));
+    try {
+      await this.$axios.post(
+        '/.netlify/functions/emails',
+        qs.stringify([
+          { templateId: 10, args: { attributes: this.fdata, emailTo: ['admin@ateliermarmailles974.re'] } },
+          { templateId: 11, args: { emailTo: [this.fdata.EMAIL] } },
+        ])
+      );
+      this.$message.success('Votre message a été envoyé avec succès.');
+      this.$refs.form.resetFields();
+    } catch (error) {
+      this.$message.error("Une erreur est survenue durant l'envoi. Veuillez réessayer ultérieurement.");
+    }
     this.isProcessing = false;
-    this['$message'].success('Votre message a été envoyé avec succès.');
-    this.$refs.form.resetFields();
   }
 
   // =================================================================================================================================
@@ -125,10 +136,10 @@ export default class CustomerFeedback extends mixins(FelaMixin, BreakpointMixin,
     Icon: { mr: 2 },
     Image: { mr: { xs: 4 }, mb: 4, flex: 0, w: 16 },
     Item: { mb: '0.25rem!important' },
-    Item$email: { maxW: 53.5 },
+    Item$email: { maxW: 54.5 },
     Item$rate: { mb: { base: '1rem!important', md: '0!important' }, row: true, wrap: true },
     Item$submit: { mt: 8, textAlign: 'center' },
-    Phone: { w: { xs: '10rem!important' } },
+    Phone: { w: { xs: '11rem!important' } },
     Rates: { mt: 2, mb: 4, px: { base: 4, xs: 8 }, py: 8, ct: 'orange', bRd: 10 },
     Row: { col: true, row: { xs: true }, ai: 'center' },
     Wrapper: { flex: 1, w: '100%' },
