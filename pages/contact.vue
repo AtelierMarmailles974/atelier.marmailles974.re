@@ -17,7 +17,7 @@ import { hero } from '~/content/pages/contact.json';
 import { Contact, Hero } from '~/definitions';
 import { BreakpointMixin } from '~/mixins/breakpoint';
 
-@Component({ components: { ContactInfos } })
+@Component({ components: { ContactInfos }, head: { title: 'Contact - ATELIER MARMAILLES 974' } } as any)
 export default class ContactPage extends mixins(FelaMixin, BreakpointMixin) {
   // =================================================================================================================================
   // PROPS

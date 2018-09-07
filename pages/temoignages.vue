@@ -15,7 +15,7 @@ import { hero, introduction } from '~/content/pages/testimonies.json';
 import testimonies from '~/content/testimonies';
 import { Hero, Introduction, Testimony } from '~/definitions';
 
-@Component({ components: { TestimoniesItem } })
+@Component({ components: { TestimoniesItem }, head: { title: 'Témoignages - ATELIER MARMAILLES 974' } } as any)
 export default class TestimoniesPage extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS

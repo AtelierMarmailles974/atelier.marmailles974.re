@@ -17,7 +17,7 @@ import { Component, FelaMixin, mixins, Rules, Styles as S } from 'nuxt-fela';
 import { content, hero, members } from '~/content/pages/about.json';
 import { Hero, Member } from '~/definitions';
 
-@Component
+@Component({ head: { title: 'A propos - ATELIER MARMAILLES 974' } } as any)
 export default class AboutPage extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS

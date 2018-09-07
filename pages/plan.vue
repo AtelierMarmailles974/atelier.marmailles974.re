@@ -11,7 +11,7 @@ import { Component, FelaMixin, mixins } from 'nuxt-fela';
 import { hero } from '~/content/pages/sitemap.json';
 import { Hero } from '~/definitions';
 
-@Component
+@Component({ head: { title: 'Plan du site - ATELIER MARMAILLES 974' } } as any)
 export default class SitemapPage extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS

@@ -8,6 +8,12 @@ export interface App {
   isScrolled: boolean;
 }
 
+export interface Article {
+  content: string;
+  order: string;
+  title: string;
+}
+
 export interface Contact {
   address: ContactAddress;
   content: string;

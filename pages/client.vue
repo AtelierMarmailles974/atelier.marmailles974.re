@@ -20,7 +20,10 @@ import CustomerShipping from '~/components/customer-shipping.vue';
 import { hero } from '~/content/pages/customer.json';
 import { Hero } from '~/definitions';
 
-@Component({ components: { CustomerFeedback, CustomerReceipt, CustomerShipping } })
+@Component({
+  components: { CustomerFeedback, CustomerReceipt, CustomerShipping },
+  head: { title: 'Client - ATELIER MARMAILLES 974' },
+} as any)
 export default class CustomerPage extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS
@@ -30,7 +33,7 @@ export default class CustomerPage extends mixins(FelaMixin) {
   hero: Hero = hero;
 
   steps = [
-    { description: "Je demande la récupération des dessins", id: 'shipping', title: 'Envoi' },
+    { description: 'Je demande la récupération des dessins', id: 'shipping', title: 'Envoi' },
     { description: "J'accuse réception de ma commande", id: 'receipt', title: 'Réception' },
     { description: 'Je donne mes impressions sur le suivi', id: 'feedback', title: 'Impressions' },
   ];
@@ -59,7 +62,7 @@ export default class CustomerPage extends mixins(FelaMixin) {
 
 
 <style lang="scss" scoped>
-@import "~/styles/theme.scss";
+@import '~/styles/theme.scss';
 
 .el-step /deep/ .el-step__description {
   display: none;

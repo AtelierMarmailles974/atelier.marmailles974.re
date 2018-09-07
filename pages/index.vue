@@ -18,7 +18,7 @@ import partners from '~/content/partners';
 import products from '~/content/products';
 import { Hero, Introduction, Partner, Product } from '~/definitions';
 
-@Component({ components: { HomePartners, HomeProducts } })
+@Component({ components: { HomePartners, HomeProducts }, head: { title: 'Accueil - ATELIER MARMAILLES 974' } } as any)
 export default class IndexPage extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS

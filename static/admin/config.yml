@@ -88,6 +88,16 @@ slug:
   clean_accents: true
 
 collections:
+  - name: articles
+    label: Articles
+    folder: content/articles
+    create: true
+    extension: json
+    slug: "{{slug}}"
+    fields:
+      - <<: *title
+      - <<: *richContent
+      - { label: Ordre, name: order, valueType: int, widget: number, default: 0 }
   - name: pages
     label: Pages
     files:

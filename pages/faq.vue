@@ -23,7 +23,7 @@ import questions from '~/content/questions';
 import { Hero, Question } from '~/definitions';
 import { ColorMixin } from '~/mixins/color';
 
-@Component({ components: { FaqQuestion } })
+@Component({ components: { FaqQuestion }, head: { title: 'F.A.Q. - ATELIER MARMAILLES 974' } } as any)
 export default class FaqPage extends mixins(FelaMixin, ColorMixin) {
   // =================================================================================================================================
   // PROPS
@@ -63,7 +63,7 @@ export default class FaqPage extends mixins(FelaMixin, ColorMixin) {
   getHalfQuestionFromRow(rowIndex: number, index = 0): Question {
     return this.halfQuestions[(rowIndex - 1) * 2 + index];
   }
-  
+
   getThirdQuestionFromRow(rowIndex: number, index = 0): Question {
     return this.thirdQuestions[(rowIndex - 1) * 3 + index];
   }
