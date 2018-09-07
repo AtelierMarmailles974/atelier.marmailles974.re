@@ -38,6 +38,15 @@ const elButton = {
   '.is-red .el-button.el-button--primary:hover': { bC: 'redD', ct: 'redD' },
 };
 
+const elDatePicker = {
+  '.is-blue .el-date-table td.current span': { bgC: 'blue' },
+  '.is-blue .el-date-table td.today span': { c: 'blue' },
+  '.is-green .el-date-table td.current span': { bgC: 'green' },
+  '.is-green .el-date-table td.today span': { c: 'green' },
+  '.is-red .el-date-table td.current span': { bgC: 'red' },
+  '.is-red .el-date-table td.today span': { c: 'red' },
+};
+
 const elFormItem = {
   '.el-form-item .el-form-item__label': { c: 'black' },
 };
@@ -109,6 +118,7 @@ const elTextarea = {
 export default {
   ...native,
   ...elButton,
+  ...elDatePicker,
   ...elFormItem,
   ...elInput,
   ...elInputNumber,
