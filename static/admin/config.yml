@@ -214,6 +214,16 @@ collections:
         fields:
           - <<: *hero
           - <<: *introduction
+  - name: partners
+    label: Partenaires
+    folder: content/partners
+    create: true
+    extension: json
+    slug: "{{slug}}"
+    fields:
+      - <<: *title
+      - <<: *image
+      - <<: *link
   - name: products
     label: Produits
     folder: content/products

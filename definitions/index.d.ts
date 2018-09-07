@@ -76,6 +76,12 @@ export interface MenuItem {
   link: string;
 }
 
+export interface Partner {
+  image: Image;
+  link: string;
+  title: string;
+}
+
 export interface Preset {
   height?: number;
   maxHeight?: number;
