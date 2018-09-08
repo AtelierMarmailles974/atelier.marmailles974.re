@@ -1,6 +1,6 @@
 <template lang="pug">
 include ../styles/mixins
-v-section(:title="question.title", :ct="ct"): +div('Content')(v-html="question.content")
+v-section(:title="question.title", v-bind="$attrs"): +div('Content')(v-html="question.content")
 </template>
 
 <script lang="ts">
@@ -13,8 +13,7 @@ export default class FaqQuestion extends mixins(FelaMixin) {
   // =================================================================================================================================
   // PROPS
   // =================================================================================================================================
-
-  @Prop() ct: string;
+  
   @Prop() question: Question;
 
   // =================================================================================================================================
@@ -23,6 +22,6 @@ export default class FaqQuestion extends mixins(FelaMixin) {
 
   rules: Rules = {
     Content: { textAlign: 'justify' },
-  }
+  };
 }
 </script>

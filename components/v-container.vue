@@ -20,20 +20,17 @@ export default class VContainer extends mixins(FelaMixin) {
   })
   align: 'center' | 'left' | 'right';
 
-  @Prop({ default: 75, type: Number })
-  maxWidth: number;
-
   @Prop({ default: 1, type: Number })
-  type: number;
+  divider: number;
 
   // =================================================================================================================================
   // STYLES
   // =================================================================================================================================
 
   rules: Rules = {
-    Component: ({ align, maxWidth, type }): S => ({
+    Component: ({ $theme: { maxWidth }, align, divider }): S => ({
       ...{ ml: (align === 'right' || align === 'center') && 'auto', mr: (align === 'left' || align === 'center') && 'auto' },
-      ...{ w: '100%', maxW: maxWidth / type, h: '100%' },
+      ...{ w: '100%', maxW: maxWidth / divider, h: '100%' },
       px: { base: 2, xs: 4, sm: 8 },
     }),
   };

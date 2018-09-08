@@ -4,13 +4,13 @@ div
   v-hero(:hero="hero")
   template(v-for="i in count")
     +div('Row')(v-if="hasThirdQuestionsRow(i)")
-      faq-question(:question="getThirdQuestionFromRow(i)")
-      faq-question(:question="getThirdQuestionFromRow(i, 1)", :ct="darkerTheme")
-      faq-question(:question="getThirdQuestionFromRow(i, 2)")
+      +faq-question('Item')(:question="getThirdQuestionFromRow(i)", align="right", :divider="thirdDivider")
+      faq-question(:question="getThirdQuestionFromRow(i, 1)", :ct="darkerTheme", :divider="thirdDivider")
+      +faq-question('Item')(:question="getThirdQuestionFromRow(i, 2)", align="left", :divider="thirdDivider")
     faq-question(:question="getFullQuestionFromRow(i)", ct="greyVVL")
     +div('Row')(v-if="hasHalfQuestionsRow(i)")
-      faq-question(:question="getHalfQuestionFromRow(i)", :ct="darkerTheme")
-      faq-question(:question="getHalfQuestionFromRow(i, 1)")
+      +faq-question('Item')(:question="getHalfQuestionFromRow(i)", :ct="darkerTheme", align="right", :divider="halfDivider")
+      +faq-question('Item')(:question="getHalfQuestionFromRow(i, 1)", align="left", :divider="halfDivider")
 </template>
 
 
@@ -21,10 +21,11 @@ import FaqQuestion from '~/components/faq-question.vue';
 import { hero } from '~/content/pages/faq.json';
 import questions from '~/content/questions';
 import { Hero, Question } from '~/definitions';
+import { BreakpointMixin } from '~/mixins/breakpoint';
 import { ColorMixin } from '~/mixins/color';
 
 @Component({ components: { FaqQuestion }, head: { title: 'F.A.Q. - ATELIER MARMAILLES 974' } } as any)
-export default class FaqPage extends mixins(FelaMixin, ColorMixin) {
+export default class FaqPage extends mixins(FelaMixin, BreakpointMixin, ColorMixin) {
   // =================================================================================================================================
   // PROPS
   // =================================================================================================================================
@@ -44,8 +45,16 @@ export default class FaqPage extends mixins(FelaMixin, ColorMixin) {
     return this.questions.filter(({ section }) => section === 1);
   }
 
+  get halfDivider(): number {
+    return this.breakpoint < 3 ? 1 : 2;
+  }
+
   get halfQuestions(): Question[] {
     return this.questions.filter(({ section }) => section === 2);
+  }
+
+  get thirdDivider(): number {
+    return this.breakpoint < 3 ? 1 : 3;
   }
 
   get thirdQuestions(): Question[] {
@@ -81,6 +90,7 @@ export default class FaqPage extends mixins(FelaMixin, ColorMixin) {
   // =================================================================================================================================
 
   rules: Rules = {
+    Item: { flex: 1 },
     Row: { row: { md: 'stretch' } },
   };
 }

@@ -1,7 +1,7 @@
 <template lang="pug">
 include ../styles/mixins
-+div('Component'): +v-container('Wrapper')(:align="align", :type="type")
-  +h3('Title') {{ title }}
++div('Component'): +v-container('Wrapper')(v-bind="$attrs")
+  +h3('Title')(v-if="title") {{ title }}
   slot
 </template>
 
@@ -17,18 +17,7 @@ export default class VSection extends mixins(FelaMixin, ColorMixin) {
   // PROPS
   // =================================================================================================================================
 
-  @Prop({
-    default: 'center',
-    type: String,
-    validator: (value) => ['center', 'left', 'right'].indexOf(value) !== -1,
-  })
-  align: string;
-
   @Prop() ct: string;
-
-  @Prop({ default: 1, type: Number })
-  type: number;
-
   @Prop() title: string;
 
   // =================================================================================================================================
@@ -41,5 +30,4 @@ export default class VSection extends mixins(FelaMixin, ColorMixin) {
     Wrapper: { row: 'flex-start', jc: 'center', ac: 'flex-start', wrap: true },
   };
 }
-
 </script>
