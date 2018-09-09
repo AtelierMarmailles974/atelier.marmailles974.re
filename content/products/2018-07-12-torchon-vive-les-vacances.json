@@ -1,13 +1,4 @@
 {
-  "pricing": {
-    "coop": 5.5,
-    "min": 9,
-    "max": 15,
-    "selected": 10
-  },
-  "isDiscount": false,
-  "order": 1,
-  "date": "2018-07-12T10:08:57+04:00",
   "extras": [
     "Tous nos dessins sur un torchon",
     "Couture des quatre bords",
@@ -15,22 +6,48 @@
     "Dimensions: 47 x 70 cm",
     "Crochet d’accroche Offert"
   ],
+  "pricing": {
+    "coop": 5.5,
+    "min": 9,
+    "max": 15,
+    "selected": 10
+  },
+  "isDiscount": false,
+  "order": 15,
+  "date": "2018-07-12T10:08:57+04:00",
   "colorings": [
-    { "description": "Torchon", "colors": ["#ffffff"] },
-    { "description": "Dessins", "colors": ["#000000"] },
-    { "description": "Seconde couleur", "colors": ["red", "green", "blue"] }
+    {
+      "description": "Torchon",
+      "colors": [
+        "#ffffff"
+      ]
+    },
+    {
+      "description": "Dessins",
+      "colors": [
+        "#000000"
+      ]
+    },
+    {
+      "description": "Seconde couleur",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ]
+    }
   ],
   "drawings": "200",
   "isNew": true,
   "subtitle": "Spécial Kermesse",
   "title": "Torchon \"Vive les vacances\"",
-  "image": {
-    "src": "/images/product.torchon-vive-les-vacances.jpg"
-  },
   "images": [
     {
       "src": "/images/product.torchon-vive-les-vacances.01.jpg",
       "alt": "Torchon \"Vive les vacances\""
     }
-  ]
+  ],
+  "image": {
+    "src": "/images/product.torchon-vive-les-vacances.jpg"
+  }
 }
