@@ -34,11 +34,11 @@ export default class TestimoniesItem extends mixins(FelaMixin) {
 
   rules: Rules = {
     Aside: { mx: 'auto', flex: 'none', maxW: 13, p: 2 },
-    Component: { row: { xs: true }, bgC: 'white' },
+    Component: { w: '100%', row: { xs: true }, bgC: 'white' },
     Content: { mb: 8, w: '100%', pl: 4, blC: 'green', blS: 'solid', blW: 6, textAlign: 'justify', fS: 'italic' },
     Date: { mb: 4, w: '100%', c: 'green', fW: '700' },
     From: { c: 'green', f: 2, fW: '500', fF: 'SpringTime', lS: 1 },
-    Main: { col: true, ai: 'flex-end', p: 4 },
+    Main: { flex: 1, col: true, ai: 'flex-end', p: 4 },
     Title: { mb: 2, w: '100%', c: 'orange', f: 2, fW: '500', fF: 'SpringTime', lS: 1, lh: 1 },
   };
 }

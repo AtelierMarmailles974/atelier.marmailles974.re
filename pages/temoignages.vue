@@ -3,7 +3,8 @@ include ../styles/mixins
 div
   v-hero(:hero="hero")
   v-introduction(:introduction="introduction")
-  +v-section('Wrapper')(title="Ce que vous en dites", ct="greyVVL"): testimonies-item(v-for="(t, i) of testimonies", :key="i", :item="t" )
+  +v-section('Wrapper')(title="Ce que vous en dites", ct="greyVVL") 
+    +testimonies-item('Item')(v-for="(t, i) of testimonies", :key="i", :item="t" )
 </template>
 
 
@@ -31,6 +32,7 @@ export default class TestimoniesPage extends mixins(FelaMixin) {
 
   rules: Rules = {
     Introduction: { f: 1.25, textAlign: 'justify' },
+    Item: { mb: 4 },
     Wrapper: { py: 16 },
   };
 }
