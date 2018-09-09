@@ -1,0 +1,44 @@
+{
+  "extras": [
+    "Tous nos dessins sur un torchon",
+    "Couture des quatre bords",
+    "Finition Premium",
+    "Dimensions: 47 x 70 cm",
+    "Crochet d’accroche Offert"
+  ],
+  "pricing": {
+    "coop": 5,
+    "min": 9,
+    "max": 14,
+    "selected": 10
+  },
+  "isDiscount": true,
+  "order": 2,
+  "date": "2018-09-09T21:05:12+04:00",
+  "colorings": [
+    {
+      "description": "Torchon",
+      "colors": [
+        "#ffffff"
+      ]
+    },
+    {
+      "description": "Dessins",
+      "colors": [
+        "#000000"
+      ]
+    }
+  ],
+  "drawings": "200",
+  "isNew": true,
+  "subtitle": "Spécial \"NOËL\"",
+  "title": "Torchon Noël",
+  "images": [
+    {
+      "src": "/images/product.torchon_de_noel.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.torchon_de_noel.01.jpg"
+  }
+}
