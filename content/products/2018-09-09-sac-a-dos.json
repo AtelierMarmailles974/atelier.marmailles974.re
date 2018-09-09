@@ -1,0 +1,25 @@
+{
+  "extras": [
+    "Couleur du sac"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 10,
+    "max": 15,
+    "selected": 10
+  },
+  "isDiscount": false,
+  "order": 3,
+  "date": "2018-09-09T16:35:31+04:00",
+  "colorings": [
+    {}
+  ],
+  "drawings": "150 R/V",
+  "isNew": true,
+  "subtitle": "Idéal pour la Piscine, la Plage, le Sport",
+  "title": "SAC A DOS",
+  "images": [],
+  "image": {
+    "src": "/images/product.sac_a_dos.01.jpg"
+  }
+}
