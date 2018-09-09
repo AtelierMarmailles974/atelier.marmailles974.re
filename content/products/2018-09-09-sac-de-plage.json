@@ -18,7 +18,13 @@
   "date": "2018-09-09T18:21:12+04:00",
   "colorings": [
     {
-      "description": "Dessins"
+      "description": "Dessins",
+      "colors": [
+        "#000000",
+        "#e0770d",
+        "#ff0000",
+        "#603913"
+      ]
     }
   ],
   "drawings": "320",
