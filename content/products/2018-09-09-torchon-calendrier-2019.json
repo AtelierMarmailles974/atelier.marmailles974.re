@@ -1,0 +1,51 @@
+{
+  "extras": [
+    "Tous nos dessins sur un torchon",
+    "Couture des quatre bords",
+    "Finition Premium",
+    "Dimensions : 70*47cm",
+    "Promotion jusqu'au 12 Octobre 2018"
+  ],
+  "pricing": {
+    "coop": 5,
+    "min": 8,
+    "max": 14,
+    "selected": 10
+  },
+  "isDiscount": true,
+  "order": 1,
+  "date": "2018-09-09T20:24:18+04:00",
+  "colorings": [
+    {
+      "description": "Torchon",
+      "colors": [
+        "#ffffff"
+      ]
+    },
+    {
+      "description": "Dessins ",
+      "colors": [
+        "#000000"
+      ]
+    },
+    {
+      "description": "Calendrier 2019",
+      "colors": [
+        "#004c7e",
+        "#f39434I"
+      ]
+    }
+  ],
+  "drawings": "200",
+  "isNew": true,
+  "subtitle": "Spécial Fin d'Année",
+  "title": "Torchon Calendrier 2019",
+  "images": [
+    {
+      "src": "/images/product.torchon_calendrier_2019.01.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.torchon_calendrier.jpg"
+  }
+}
