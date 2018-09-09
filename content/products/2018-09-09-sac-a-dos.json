@@ -19,21 +19,21 @@
     {
       "description": "Sac à dos",
       "colors": [
-        "whit"
+        "#ffffff"
       ]
     },
     {
       "description": "Dessins",
       "colors": [
-        "black"
+        "#000000"
       ]
     },
     {
       "description": "2ème couleur au choix",
       "colors": [
-        "bleu",
-        "rouge",
-        "vert"
+        "red",
+        "green",
+        "blue"
       ]
     }
   ],
@@ -41,7 +41,12 @@
   "isNew": true,
   "subtitle": "Idéal pour la Piscine, la Plage, le Sport",
   "title": "Sac à dos",
-  "images": [],
+  "images": [
+    {
+      "src": "/images/product.sac_a_dos.02.jpg"
+    },
+    {}
+  ],
   "image": {
     "src": "/images/product.sac_a_dos.01.jpg"
   }
