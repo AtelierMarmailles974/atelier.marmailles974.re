@@ -1,0 +1,38 @@
+{
+  "extras": [
+    "Tissu micro tissé",
+    "Finition premium",
+    "La base antidérapant élimine les déplacements non souhaités",
+    "Adapté à toutes les souris",
+    "Dimensions : 28*19*0.5cm"
+  ],
+  "pricing": {
+    "coop": 4.5,
+    "min": 8,
+    "max": 12,
+    "selected": 9
+  },
+  "isDiscount": false,
+  "order": 8,
+  "date": "2018-09-09T19:38:55+04:00",
+  "colorings": [
+    {
+      "description": "Choisissez parmi nos suggestions !"
+    }
+  ],
+  "drawings": "30",
+  "isNew": true,
+  "subtitle": "Le tapis de souris est un grand classique !",
+  "title": "Tapis de Souris",
+  "images": [
+    {
+      "src": "/images/product.tapis_de_souris.01.jpg"
+    },
+    {
+      "src": "/images/product.tapis_de_souris.02.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.tapis_de_souris.jpg"
+  }
+}
