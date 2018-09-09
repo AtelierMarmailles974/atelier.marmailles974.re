@@ -43,11 +43,16 @@
   "title": "Sac à dos",
   "images": [
     {
-      "src": "/images/product.sac_a_dos.02.jpg"
+      "src": "/images/product.sac_a_dos.01.jpg"
     },
-    {}
+    {
+      "src": "/images/product.sac_a_dos.03.jpg"
+    },
+    {
+      "src": "/images/product.sac_a_dos.02.jpg"
+    }
   ],
   "image": {
-    "src": "/images/product.sac_a_dos.01.jpg"
+    "src": "/images/product.tablier-enfant-adulte.jpg"
   }
 }
