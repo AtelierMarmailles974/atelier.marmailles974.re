@@ -1,0 +1,45 @@
+{
+  "extras": [
+    "Couleur du sac écru",
+    "Finition Premium",
+    "Dimension : 31*45cm",
+    "Poche intérieure",
+    "160 Dessins recto",
+    "320 recto/versot"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 9,
+    "max": 15,
+    "selected": 10
+  },
+  "isDiscount": false,
+  "order": 4,
+  "date": "2018-09-09T17:44:53+04:00",
+  "colorings": [
+    {
+      "description": "Dessins",
+      "colors": [
+        "#000000",
+        "#e0770d",
+        "#ff0000",
+        "#603913"
+      ]
+    }
+  ],
+  "drawings": "320",
+  "isNew": true,
+  "subtitle": "Parfait pour un usage au quotidien !",
+  "title": "Sac de courses pliable",
+  "images": [
+    {
+      "src": "/images/product.sac_de_course.01.jpg"
+    },
+    {
+      "src": "/images/product.sac_de_courses.02.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.tablier-enfant-adulte.jpg"
+  }
+}
