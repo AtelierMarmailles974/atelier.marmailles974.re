@@ -51,7 +51,7 @@ export default class HomeProductContent extends mixins(FelaMixin) {
     Color: (color): S => ({ ml: 1, w: 1.25, h: 1.25, bgC: color, bC: 'greyVL', bS: 'solid', bW: 1 }),
     Colors: { row: true },
     Coloring: { row: true, jc: 'space-between', px: 2, py: 1, bgC: 'white' },
-    Colorings: { flex: 1 },
+    Colorings: { flex: 1, col: 'center', bgC: 'white' },
     Component: { col: true },
     Drawings: { row: true, px: 2, py: 2, ct: 'orange' },
     Extra: { row: true, py: 1, c: 'orange' },
