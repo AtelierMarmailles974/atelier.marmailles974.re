@@ -1,6 +1,10 @@
 {
   "extras": [
-    "Couleur du sac"
+    "Couleur du sac à dos Blanc",
+    "Couture et cordelette vert",
+    "Finition Premium",
+    "Dimension : 29*38cm",
+    "75 dessins au recto / 75 au verso"
   ],
   "pricing": {
     "coop": 6.5,
@@ -12,12 +16,31 @@
   "order": 3,
   "date": "2018-09-09T16:35:31+04:00",
   "colorings": [
-    {}
+    {
+      "description": "Sac à dos",
+      "colors": [
+        "whit"
+      ]
+    },
+    {
+      "description": "Dessins",
+      "colors": [
+        "black"
+      ]
+    },
+    {
+      "description": "2ème couleur au choix",
+      "colors": [
+        "bleu",
+        "rouge",
+        "vert"
+      ]
+    }
   ],
-  "drawings": "150 R/V",
+  "drawings": "150 ",
   "isNew": true,
   "subtitle": "Idéal pour la Piscine, la Plage, le Sport",
-  "title": "SAC A DOS",
+  "title": "Sac à dos",
   "images": [],
   "image": {
     "src": "/images/product.sac_a_dos.01.jpg"
