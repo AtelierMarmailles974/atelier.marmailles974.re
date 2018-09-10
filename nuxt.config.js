@@ -53,6 +53,7 @@ module.exports = {
           'faAsterisk',
           'faBars',
           'faEnvelope',
+          'faFilePdf',
           'faHome',
           'faMapMarkerAlt',
           'faPaperPlane',

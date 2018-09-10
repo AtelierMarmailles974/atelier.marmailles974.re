@@ -2,7 +2,7 @@
 include ../styles/mixins
 div
   v-hero(:hero="hero")
-  v-section(v-for="(a, i) of articles", :title="title(a)", :ct="ct(i)"): div(v-html="a.content")
+  v-section(v-for="(a, i) of articles", :key="`article${i}`", :title="title(a)", :ct="ct(i)"): div(v-html="a.content")
 </template>
 
 

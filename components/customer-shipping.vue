@@ -20,6 +20,9 @@ v-section(title="Votre atelier dessin est terminé ?", ct="greyVVL")
       +p('Description') Avant de déplacer notre transporteur merci à vous de vérifier et de valider les points suivants :
       +el-form-item('Item$switch')(v-for="s of switches", :key="s.id", :prop="s.id", label-width="0")
         el-switch(v-model="fdata[s.id]", :active-text="s.label", :active-color="$theme.colors.green", :inactive-color="$theme.colors.red")
+      +a('Tutorial')(href="/pdf/tutoriel.pdf", target="_blank") 
+        span Vous pouvez visualiser et télécharger notre tutoriel
+        +fa-icon('Tutorial_icon')(icon="file-pdf", size="lg")
     +el-form-item('Item$date').el-form-item--date(label="Merci de m'indiquer la date que vous avez fixée aux parents pour le retour des bons de commande :", label-width="auto", prop="DATE", required) 
       el-date-picker(v-model="fdata.DATE", :clearable="false", format="dd-MM-yyyy", :picker-options="pickerOptions")
     el-form-item(label="Observations :", :label-width="observationWidth", prop="COMMENTS", :required="false")
@@ -180,6 +183,8 @@ export default class CustomerShipping extends mixins(FelaMixin, BreakpointMixin,
     Phone: { w: { xs: '11rem!important' } },
     Row: { col: true, row: { xs: true }, ai: 'center' },
     Switches: { my: 4, px: { base: 4, xs: 8 }, py: 8, ct: 'orange', bRd: 10 },
+    Tutorial: { mt: 4, row: true, jc: 'center', p: 4, ct: 'orangeD' },
+    Tutorial_icon: { ml: 3 },
   };
 }
 </script>
