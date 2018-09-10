@@ -9,6 +9,8 @@ div
 
 
 <script lang="ts">
+import _filter from 'lodash/filter';
+import _sortBy from 'lodash/sortBy';
 import { Component, FelaMixin, mixins } from 'nuxt-fela';
 
 import HomePartners from '~/components/home-partners.vue';
@@ -27,6 +29,6 @@ export default class IndexPage extends mixins(FelaMixin) {
   hero: Hero = hero;
   introduction: Introduction = introduction;
   partners: Partner[] = partners;
-  products: Product[] = products;
+  products: Product[] = _sortBy(_filter(products, { isVisible: true }), 'order');
 }
 </script>

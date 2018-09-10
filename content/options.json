@@ -91,7 +91,7 @@
       {
         "id": "sitemap",
         "label": "Plan du site",
-        "link": "/plan",
+        "link": "/sitemap.xml",
         "exact": false
       },
       {

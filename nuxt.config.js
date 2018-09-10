@@ -75,6 +75,7 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
     'nuxt-element-ui',
     'nuxt-fela',
     'nuxt-fontawesome',
@@ -87,5 +88,9 @@ module.exports = {
       target: 'http://localhost:9000',
       pathRewrite: { '^/.netlify/functions': '' },
     },
+  },
+  sitemap: {
+    exclude: ['/admin/**'],
+    hostname: 'https://atelier.marmailles974.re',
   },
 };

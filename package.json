@@ -19,6 +19,7 @@
     "@nuxtjs/apollo": "^4.0.0-rc1",
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",
+    "@nuxtjs/sitemap": "^0.1.1",
     "graphql-tag": "^2.9.2",
     "lazysizes": "^4.0.4",
     "lodash": "^4.17.10",
