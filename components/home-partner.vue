@@ -27,8 +27,8 @@ export default class HomePartner extends mixins(FelaMixin) {
     return {
       ...this.partner.image,
       src: `${require(`!url-loader!sharp-image-loader?width=40&height=40&blurSigma=2!~/static/images/partner.${src}`)}`,
-      'data-srcset': `${require(`!file-loader!sharp-image-loader?width=256&height=256!~/static/images/partner.${src}`)} 192w,
-      ${require(`!file-loader!sharp-image-loader?width=512&height=512!~/static/images/partner.${src}`)} 384w`,
+      'data-srcset': `${require(`!file-loader!sharp-image-loader?width=64&height=64!~/static/images/partner.${src}`)} 64w,
+      ${require(`!file-loader!sharp-image-loader?width=128&height=128!~/static/images/partner.${src}`)} 128w`,
     };
   }
 
@@ -49,12 +49,12 @@ export default class HomePartner extends mixins(FelaMixin) {
   // =================================================================================================================================
 
   rules: Rules = {
-    Component: { relative: true, overflow: 'hidden', w: '100%' },
-    Image: { w: 12, h: 12 },
+    Component: { relative: true, overflow: 'hidden', w: 6, h: 6 },
+    Image: { w: 6, h: 6 },
     Title: ({ isHovered }): S => ({
       ...{ pin: 1, row: true, jc: 'center' },
       ...{ ct: 'orange', opacity: 0.9 },
-      uppercase: true,
+      ...{ f: 0.75, uppercase: true, textAlign: 'center' },
       transform: isHovered ? 'translateY(0)' : 'translateY(-100%)',
       tr: '0.2s all',
     }),
