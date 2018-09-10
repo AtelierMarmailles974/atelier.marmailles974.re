@@ -1,0 +1,46 @@
+{
+  "extras": [
+    "Couleur du Torchon Blanc ou Rouge",
+    "Couture des quatre bords",
+    "Finition Premium",
+    "Dimension : 70*47cm",
+    "Crochet d'accroche Offert"
+  ],
+  "pricing": {
+    "coop": 5,
+    "min": 8,
+    "max": 14,
+    "selected": 9
+  },
+  "isDiscount": true,
+  "order": 8,
+  "date": "2018-09-10T17:03:01+04:00",
+  "colorings": [
+    {
+      "description": "Torchon Rouge : 1 seule couleur pour les dessins",
+      "colors": [
+        "#808080"
+      ]
+    },
+    {
+      "description": "Torchon Blanc : 1 des 5 couleurs au choix pour les dessins",
+      "colors": [
+        "#020202",
+        "#1975dc",
+        "#eda213",
+        "#fb0e02",
+        "#18bd10"
+      ]
+    }
+  ],
+  "drawings": "300",
+  "isNew": false,
+  "subtitle": "Bénéficiez de notre Promo de la Rentrée !",
+  "title": "Torchon Blanc ou Rouge - Promo -",
+  "images": [
+    {}
+  ],
+  "image": {
+    "src": "/images/product.torchon_calendrier.jpg"
+  }
+}
