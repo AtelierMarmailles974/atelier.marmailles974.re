@@ -8,7 +8,8 @@ include ../styles/mixins
         +span('Contact_label') {{ i.value }}
   +ul('List')
     +li('Color','c')(v-for="c in data.colors", :key="c", @click="changeColor(c)")
-    +li('Social')(v-for="s in contact.social", :key="s.icon"): +a('Link')(:href="s.value"): fa-icon(:icon="['fab',s.icon]", size="lg")
+    +li('Social')(v-for="s in contact.social", :key="s.icon"): +a('Link')(:href="s.value", target="_blank")
+      fa-icon(:icon="['fab',s.icon]", size="lg")
 </template>
 
 
