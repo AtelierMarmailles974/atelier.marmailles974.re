@@ -13,14 +13,14 @@
     "phone": {
       "type": "tel",
       "icon": "phone",
-      "value": "06 93 20 55 10"
+      "value": "0693 205 510"
     },
     "address": {
       "icon": "map-marker-alt",
-      "street": "9 Rue de l’Etang",
-      "extra": "Z.I. Bel Air – Atelier n°11",
-      "zipcode": "97450",
-      "city": "SAINT-LOUIS",
+      "street": "4 Rue Franck Camille Cadet",
+      "extra": "Z.I.E. Les Sables",
+      "zipcode": "97427",
+      "city": "ÉTANG SALE",
       "latitude": -21.289185,
       "longitude": 55.399272
     },
