@@ -3,8 +3,8 @@ include ../styles/mixins
 +nav('Component')
   +v-container('Wrapper')
     +ul('Menu')
-      +li('MenuItem', 'i === 0')(v-for="(item, i) in menu", :key="item.id") 
-        nuxt-link(:to="item.link") {{ item.label }}
+      +li('MenuItem', 'true'): a(href="/sitemap.xml") Plan du site
+      +li('MenuItem', 'false'): nuxt-link(to="mentions-legales") Mentions légales
     +span('Copyright') ©2018 Atelier Marmailles - Tous droits réservés
 </template>
 
