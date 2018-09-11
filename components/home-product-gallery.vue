@@ -37,7 +37,7 @@ export default class HomeProductGallery extends mixins(FelaMixin, ColorMixin) {
   selectedIndex = -1;
 
   get imgs() {
-    return this.images.map(({ alt, src }) => {
+    return this.images.filter(({ src }) => !!src).map(({ alt, src }) => {
       const o = src.replace('/images/product.', '');
       src = require(`!url-loader!sharp-image-loader?width=40&height=40&blurSigma=2!~/static/images/product.${o}`);
       return {
