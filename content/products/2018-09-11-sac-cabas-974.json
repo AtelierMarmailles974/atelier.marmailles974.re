@@ -1,0 +1,46 @@
+{
+  "extras": [
+    "Sac Cabas en Polypropylène",
+    "Dimensions : 47*37*14cm",
+    ""
+  ],
+  "pricing": {
+    "coop": 6,
+    "min": 8,
+    "max": 12,
+    "selected": 10
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 3,
+  "date": "2018-09-11T03:08:53+04:00",
+  "colorings": [
+    {
+      "description": "Sac au couleur de la Réunion"
+    },
+    {
+      "description": "Dessins",
+      "colors": [
+        "#000000"
+      ]
+    }
+  ],
+  "drawings": "120",
+  "isNew": true,
+  "subtitle": "Faite vos courses aux couleurs de la Réunion !",
+  "title": "Sac Cabas 974",
+  "images": [
+    {
+      "src": "/images/product.sac_cabas.01.jpg"
+    },
+    {
+      "src": "/images/product.sac_cabas.02.jpg"
+    },
+    {
+      "src": "/images/product.sac_cabas.03.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.sac_cabas.jpg"
+  }
+}
