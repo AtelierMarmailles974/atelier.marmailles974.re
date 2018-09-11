@@ -1,6 +1,6 @@
 <template lang="pug">
 include ../styles/mixins
-+a('Component')(:href="partner.link", @mouseout="mouseout", @mouseover="mouseover")
++a('Component')(:href="partner.link", target="_blank", @mouseout="mouseout", @mouseover="mouseover")
   +img('Image').lazyload(v-bind="img")
   +span('Title') {{ partner.title }}
 </template>

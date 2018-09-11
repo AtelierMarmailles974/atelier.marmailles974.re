@@ -7,7 +7,7 @@ div
 
 
 <script lang="ts">
-import _sortBy from 'lodash/sortBy';
+import _orderBy from 'lodash/orderBy';
 import { Component, FelaMixin, mixins } from 'nuxt-fela';
 
 import articles from '~/content/articles';
@@ -21,7 +21,7 @@ export default class LegaleNoticePage extends mixins(FelaMixin, ColorMixin) {
   // PROPS
   // =================================================================================================================================
 
-  articles: Article[] = _sortBy(articles, 'order');
+  articles: Article[] = _orderBy(articles, 'order');
   hero: Hero = hero;
 
   // =================================================================================================================================

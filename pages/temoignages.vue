@@ -9,6 +9,7 @@ div
 
 
 <script lang="ts">
+import _orderBy from 'lodash/orderBy';
 import { Component, FelaMixin, mixins, Rules } from 'nuxt-fela';
 
 import TestimoniesItem from '~/components/testimonies-item.vue';
@@ -24,7 +25,7 @@ export default class TestimoniesPage extends mixins(FelaMixin) {
 
   hero: Hero = hero;
   introduction: Introduction = introduction;
-  testimonies: Testimony[] = testimonies;
+  testimonies: Testimony[] = _orderBy(testimonies, 'date', 'desc');
 
   // =================================================================================================================================
   // STYLES
