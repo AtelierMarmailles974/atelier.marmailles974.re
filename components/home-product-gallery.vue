@@ -1,12 +1,18 @@
 <template lang="pug">
 include ../styles/mixins
 +div('Component')
-  +ul('Images'): +li('Image')(v-for="(image,i) in imgs"): +img('Image').lazyload(v-bind="image.thumb", @click="select(image)")
+  +ul('Images'): +li('Image')(v-for="(i, ind) in imgs")
+    +img('Image').lazyload(v-bind="i.thumb", @click="select($event.target, i.selection, ind)")
   +el-button(['Action', 'Action$previous'])(v-if="active > 0", icon="el-icon-arrow-left", type="primary", @click="previous")
   +el-button(['Action', 'Action$next'])(v-if="active < images.length - 1", icon="el-icon-arrow-right", type="primary", @click="next")
-  +div('Mask')(v-if="selected"): +div('Mask$wrapper')
-    +img('Selection').lazyload(v-bind="selected.selection")
-    +el-button(['Action','Action$close'])(icon="el-icon-close", type="primary", @click="unselect()")
+  transition
+    +div('Mask')(v-if="selected")
+      +img('Selection').lazyload(v-bind="selected")
+      +el-button(['Action','Action$close'])(icon="el-icon-close", type="primary", @click="unselect()")
+      +el-button(['Action', 'Action$previous', 'Action$selectionPrevious'])(v-if="active > 0", icon="el-icon-arrow-left", type="primary", 
+      @click="selectPrevious")
+      +el-button(['Action', 'Action$next', 'Action$selectionNext'])(v-if="active < images.length - 1", icon="el-icon-arrow-right", 
+      type="primary", @click="selectNext")
 </template>
 
 
@@ -22,11 +28,13 @@ export default class HomeProductGallery extends mixins(FelaMixin, ColorMixin) {
   // PROPS
   // =================================================================================================================================
 
-  @Prop({ default: [] })
+  @Prop({ default: [], type: Array })
   images: Image[];
 
   active = 0;
+  from;
   selected: Image = null;
+  selectedIndex = -1;
 
   get imgs() {
     return this.images.map(({ alt, src }) => {
@@ -66,29 +74,50 @@ export default class HomeProductGallery extends mixins(FelaMixin, ColorMixin) {
     this.active--;
   }
 
-  select(image: Image) {
+  select(el: Element, image: Image, index: number) {
+    const rect = el.getBoundingClientRect();
+    this.from = {
+      left: rect.left / 4,
+      top: rect.top / 4,
+    };
+
     this.selected = image;
+    this.selectedIndex = index;
+  }
+
+  selectNext() {
+    this.selectedIndex++;
+    this.selected = this.imgs[this.selectedIndex].selection;
+  }
+
+  selectPrevious() {
+    this.selectedIndex--;
+    this.selected = this.imgs[this.selectedIndex].selection;
   }
 
   unselect() {
     this.selected = null;
+    this.selectedIndex = -1;
   }
 
   // =================================================================================================================================
   // STYLES
   // =================================================================================================================================
 
+  selection_bW = 8;
+
   rules: Rules = {
     Action: { p: '1rem!important', bRd: '0!important' },
-    Action$close: { absolute: 1, right: 0.5, top: 0.5 },
+    Action$close: { absolute: 1, right: 1, top: 1 },
     Action$next: { pinR: 1, top: 'calc(50% - 25px)', opacity: 0.75 },
     Action$previous: { pinL: 1, top: 'calc(50% - 25px)', opacity: 0.75 },
+    Action$selectionNext: ({ selection_bW }): S => ({ mr: `${selection_bW}px!important` }),
+    Action$selectionPrevious: ({ selection_bW }): S => ({ ml: `${selection_bW}px!important` }),
     Component: { relative: true, overflow: 'hidden', bW: 6, bS: 'solid', bC: 'white' },
     Image: { flex: 'none', w: '100%', cursor: 'pointer' },
     Images: ({ active }): S => ({ row: 'stretch', transform: `translateX(-${active}00%)`, transition: 'all 0.2s' }),
     Mask: { fix: 9, row: true, jc: 'center', bgC: 'black50' },
-    Mask$wrapper: { relative: true },
-    Selection: { maxW: '90vw', maxH: '90vh', bW: 8, bS: 'solid', bC: 'white', tr: 'all 0.3s' },
+    Selection: ({ selection_bW }): S => ({ maxW: '90vw', maxH: '90vh', bW: selection_bW, bS: 'solid', bC: 'white', tr: 'all 0.3s' }),
   };
 }
 </script>
