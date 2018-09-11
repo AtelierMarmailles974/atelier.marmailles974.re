@@ -1,6 +1,6 @@
 <template lang="pug">
 include ../styles/mixins
-v-section(v-if="hasPartners", title="Nous travaillons ensemble"): +ul('Partners'): +li('Partner')(v-for="p of partners", key="p.title")
+v-section(v-if="hasPartners", title="Nous travaillons ensemble"): +ul('Partners'): +li('Partner')(v-for="p of partners", :key="p.title")
   home-partner(:partner="p")
 </template>
 
