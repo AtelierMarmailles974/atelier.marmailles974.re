@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://eager-meitner-65eee1.netlify.com/* https://atelier.marmailles974.re/:splat 301!
