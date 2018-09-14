@@ -5,7 +5,7 @@
     "Finition Premium",
     "Dimensions: 47 x 70 cm",
     "Crochet d’accroche Offert",
-    "PROMO jusqu'au 12 Novembre 2108"
+    "Code Promo \"TN2018\" jusqu'au 12 Novembre 2108"
   ],
   "pricing": {
     "coop": 5,
@@ -13,8 +13,8 @@
     "max": 14,
     "selected": 10
   },
-  "isDiscount": true,
   "isVisible": true,
+  "isDiscount": true,
   "order": 2,
   "date": "2018-09-09T21:05:12+04:00",
   "colorings": [
