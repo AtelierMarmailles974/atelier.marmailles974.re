@@ -4,7 +4,7 @@
     "Couture des quatre bords",
     "Finition Premium",
     "Dimensions : 70*47cm",
-    "Promotion jusqu'au 12 Octobre 2018"
+    "Code Promo \"TC2019\" jusqu'au 12 Octobre 2018"
   ],
   "pricing": {
     "coop": 5,
@@ -12,8 +12,8 @@
     "max": 14,
     "selected": 10
   },
-  "isDiscount": true,
   "isVisible": true,
+  "isDiscount": true,
   "order": 1,
   "date": "2018-09-09T20:24:18+04:00",
   "colorings": [
