@@ -14,7 +14,7 @@
     "selected": 9
   },
   "isVisible": true,
-  "isDiscount": true,
+  "isDiscount": false,
   "order": 8,
   "date": "2018-09-10T17:03:01+04:00",
   "colorings": [
@@ -48,6 +48,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.torchon_blanc_ou_rouge.jpg"
+    "src": ""
   }
 }
