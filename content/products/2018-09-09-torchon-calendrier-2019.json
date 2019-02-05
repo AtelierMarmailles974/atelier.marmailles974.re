@@ -3,8 +3,7 @@
     "Tous nos dessins sur un torchon",
     "Couture des quatre bords",
     "Finition Premium",
-    "Dimensions : 70*47cm",
-    "Code Promo \"TC2019\" Valable jusqu'au 12 Octobre 2018"
+    "Dimensions : 70*47cm"
   ],
   "pricing": {
     "coop": 5,
@@ -13,7 +12,7 @@
     "selected": 10
   },
   "isVisible": true,
-  "isDiscount": true,
+  "isDiscount": false,
   "order": 1,
   "date": "2018-09-09T20:24:18+04:00",
   "colorings": [
@@ -43,10 +42,10 @@
   "title": "Torchon Calendrier 2019",
   "images": [
     {
-      "src": "/images/product.torchon_calendrier_2019.01.jpg"
+      "src": "/images/product.calendrier19.jpg"
     }
   ],
   "image": {
-    "src": "/images/product.torchon_calendrier.jpg"
+    "src": ""
   }
 }
