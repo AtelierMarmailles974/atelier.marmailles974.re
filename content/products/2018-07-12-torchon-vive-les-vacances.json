@@ -12,7 +12,7 @@
     "max": 15,
     "selected": 10
   },
-  "isVisible": false,
+  "isVisible": true,
   "isDiscount": false,
   "order": 15,
   "date": "2018-07-12T10:08:57+04:00",
@@ -49,6 +49,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.torchon-vive-les-vacances.jpg"
+    "src": "/images/product.fete_ecole.jpg"
   }
 }
