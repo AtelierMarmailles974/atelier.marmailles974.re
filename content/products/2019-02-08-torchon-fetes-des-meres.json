@@ -1,0 +1,53 @@
+{
+  "extras": [
+    "Tous nos dessins sur un torchon",
+    "Couture des quatre bords",
+    "Finition Premium",
+    "Dimension : 47 x 70 cm",
+    "Crochet d'accroche Offert"
+  ],
+  "pricing": {
+    "coop": 5.5,
+    "min": 9,
+    "max": 15,
+    "selected": 7
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 3,
+  "date": "2019-02-08T15:21:01+04:00",
+  "colorings": [
+    {
+      "description": "Torchon :",
+      "colors": [
+        "fdfcfa"
+      ]
+    },
+    {
+      "description": "Dessins :",
+      "colors": [
+        "020202"
+      ]
+    },
+    {
+      "description": "Seconde couleur",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ]
+    }
+  ],
+  "drawings": "200",
+  "isNew": true,
+  "subtitle": "Bonne Fête aux Mamans de la Réunion",
+  "title": "TORCHON FÊTES DES MÈRES",
+  "images": [
+    {
+      "src": "/images/product.torchon_maman.14.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.promo.09.jpg"
+  }
+}
