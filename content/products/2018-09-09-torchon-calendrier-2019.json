@@ -32,8 +32,8 @@
     {
       "description": "Calendrier 2019",
       "colors": [
-        "#004c7e",
-        "#f39434I"
+        "orange",
+        "blue"
       ]
     }
   ],
