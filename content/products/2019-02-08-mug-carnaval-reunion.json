@@ -1,0 +1,48 @@
+{
+  "extras": [
+    "Céramique blanche",
+    "Convient au micro onde",
+    "Dimension 9*26 cm",
+    "Contenance 30 cl",
+    "Boite valise de protection Offerte"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 9,
+    "max": 15,
+    "selected": 9
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 1,
+  "date": "2019-02-08T12:21:36+04:00",
+  "colorings": [
+    {
+      "description": "Mug",
+      "colors": [
+        "fdfcfa"
+      ]
+    }
+  ],
+  "drawings": "30",
+  "isNew": true,
+  "subtitle": "05 Mars Mardi Gras",
+  "title": "MUG CARNAVAL RÉUNION",
+  "images": [
+    {
+      "src": "/images/product.mug_carnaval.02.jpg"
+    },
+    {
+      "src": "/images/product.mug_carnaval.03.jpg"
+    },
+    {
+      "src": "/images/product.mug_carnaval.01.jpg"
+    },
+    {
+      "src": "/images/product.mug_carnaval.04.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.carnaval.01.jpg"
+  }
+}
