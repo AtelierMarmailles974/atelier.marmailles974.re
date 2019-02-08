@@ -3,7 +3,8 @@
     "Couture des quatre bords",
     "Finition Premium",
     "Dimensions Enfant : 48 x 61 cm",
-    "Dimensions Adulte : 56 x 72 cm"
+    "Dimensions Adulte : 56 x 72 cm",
+    "code PROMO Jade974"
   ],
   "pricing": {
     "coop": 6,
@@ -48,6 +49,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.promo.01.jpg"
+    "src": "/images/product.promo.05.jpg"
   }
 }
