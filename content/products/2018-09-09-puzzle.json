@@ -6,14 +6,14 @@
     "35 pièces"
   ],
   "pricing": {
-    "coop": 4.5,
+    "coop": 4,
     "min": 8,
     "max": 12,
     "selected": 9
   },
-  "isDiscount": false,
   "isVisible": true,
-  "order": 6,
+  "isDiscount": true,
+  "order": 13,
   "date": "2018-09-09T18:41:32+04:00",
   "colorings": [
     {
@@ -36,6 +36,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.puzzle.jpg"
+    "src": "/images/product.promo.03.jpg"
   }
 }
