@@ -12,9 +12,9 @@
     "max": 14,
     "selected": 10
   },
-  "isDiscount": false,
   "isVisible": true,
-  "order": 7,
+  "isDiscount": false,
+  "order": 6,
   "date": "2018-09-09T19:11:20+04:00",
   "colorings": [
     {
@@ -36,7 +36,10 @@
       "src": "/images/product.mug_dessins.01.jpg"
     },
     {
-      "src": "/images/product.mug_dessins.02.jpg"
+      "src": "/images/product.mug_dessins.03.jpg"
+    },
+    {
+      "src": "/images/product.mug.03.jpg"
     }
   ],
   "image": {
