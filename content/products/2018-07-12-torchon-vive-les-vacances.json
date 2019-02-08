@@ -14,7 +14,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 15,
+  "order": 5,
   "date": "2018-07-12T10:08:57+04:00",
   "colorings": [
     {
@@ -49,6 +49,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.fete_ecole.jpg"
+    "src": "/images/product.kermesse.01.jpg"
   }
 }
