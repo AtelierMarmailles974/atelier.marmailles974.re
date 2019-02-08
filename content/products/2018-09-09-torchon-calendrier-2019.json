@@ -13,7 +13,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 1,
+  "order": 15,
   "date": "2018-09-09T20:24:18+04:00",
   "colorings": [
     {
@@ -37,7 +37,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Spécial Fin d'Année",
   "title": "Torchon Calendrier 2019",
   "images": [
@@ -46,6 +46,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.calendrier19.jpg"
+    "src": "/images/product.promo.06.jpg"
   }
 }
