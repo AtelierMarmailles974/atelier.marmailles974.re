@@ -13,9 +13,9 @@
     "max": 15,
     "selected": 10
   },
-  "isDiscount": false,
   "isVisible": true,
-  "order": 3,
+  "isDiscount": false,
+  "order": 11,
   "date": "2018-09-09T16:35:31+04:00",
   "colorings": [
     {
