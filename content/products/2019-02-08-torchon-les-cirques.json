@@ -27,13 +27,13 @@
     {
       "description": "Dessins : ",
       "colors": [
-        "020202"
+        "black"
       ]
     },
     {
       "description": "Maquette : ",
       "colors": [
-        "1a0af7"
+        "blue"
       ]
     }
   ],
