@@ -7,14 +7,14 @@
     "Dimensions : 28*19*0.5cm"
   ],
   "pricing": {
-    "coop": 4.5,
+    "coop": 4,
     "min": 8,
     "max": 12,
     "selected": 9
   },
-  "isDiscount": false,
   "isVisible": true,
-  "order": 8,
+  "isDiscount": true,
+  "order": 14,
   "date": "2018-09-09T19:38:55+04:00",
   "colorings": [
     {
@@ -34,6 +34,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.tapis_de_souris.jpg"
+    "src": "/images/product.promo.04.jpg"
   }
 }
