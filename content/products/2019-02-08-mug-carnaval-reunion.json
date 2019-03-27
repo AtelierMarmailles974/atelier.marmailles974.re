@@ -13,7 +13,7 @@
     "max": 15,
     "selected": 10
   },
-  "isVisible": true,
+  "isVisible": false,
   "isDiscount": false,
   "order": 1,
   "date": "2019-02-08T12:21:36+04:00",
