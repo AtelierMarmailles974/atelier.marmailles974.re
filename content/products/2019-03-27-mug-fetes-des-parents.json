@@ -1,0 +1,40 @@
+{
+  "extras": [
+    "Céramique blanche",
+    "Convient au micro onde",
+    "Dimension 9*26 cm",
+    "Contenance 30 cl",
+    "Boîte valise de protection Offerte",
+    "1 Dessin"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 10,
+    "max": 15,
+    "selected": 10
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 1,
+  "date": "2019-03-27T19:36:47+04:00",
+  "colorings": [
+    {
+      "description": "Mug",
+      "colors": [
+        "#ffffff"
+      ]
+    }
+  ],
+  "drawings": "1",
+  "isNew": true,
+  "subtitle": "Papa Maman je vous Aime !",
+  "title": "MUG \"FÊTES DES PARENTS\"",
+  "images": [
+    {
+      "src": "/images/product.mug_dessins.04.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.promo.11.jpg"
+  }
+}
