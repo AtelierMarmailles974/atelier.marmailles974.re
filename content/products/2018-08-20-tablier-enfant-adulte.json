@@ -4,11 +4,10 @@
     "Finition Premium",
     "Dimensions Enfant : 48 x 61 cm",
     "Dimensions Adulte : 56 x 72 cm",
-    "Code PROMO Jade974",
     "170 Dessins"
   ],
   "pricing": {
-    "coop": 6,
+    "coop": 6.5,
     "min": 8,
     "max": 15,
     "selected": 10
@@ -50,6 +49,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.promo.05.jpg"
+    "src": "/images/product.promo.12.jpg"
   }
 }
