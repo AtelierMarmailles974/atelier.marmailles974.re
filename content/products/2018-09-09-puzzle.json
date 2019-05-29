@@ -4,11 +4,10 @@
     "Finition Premium",
     "Dimension : 28x19 cm",
     "35 pièces",
-    "Code PROMO Marine974",
     "30 Dessins"
   ],
   "pricing": {
-    "coop": 4.5,
+    "coop": 5.5,
     "min": 9,
     "max": 12,
     "selected": 9
@@ -38,6 +37,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.promo.03.jpg"
+    "src": "/images/product.puzzle.jpg"
   }
 }
