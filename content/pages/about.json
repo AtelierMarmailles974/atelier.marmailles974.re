@@ -9,14 +9,6 @@
   },
   "members": [
     {
-      "name": "Laurent",
-      "role": "Responsable Logistique",
-      "image": {
-        "src": "/images/member.laurent.jpg",
-        "alt": "Laurent - Atelier Marmailles 974"
-      }
-    },
-    {
       "name": "Michael",
       "role": "Responsable Création",
       "image": {
