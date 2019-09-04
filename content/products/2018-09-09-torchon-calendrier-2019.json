@@ -14,7 +14,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 15,
+  "order": 2,
   "date": "2018-09-09T20:24:18+04:00",
   "colorings": [
     {
@@ -30,10 +30,9 @@
       ]
     },
     {
-      "description": "Calendrier 2019",
+      "description": "Calendrier 2020",
       "colors": [
-        "orange",
-        "blue"
+        "#04f81b"
       ]
     }
   ],
@@ -47,6 +46,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.promo.06.jpg"
+    "src": "/images/product.promo.18.jpg"
   }
 }
