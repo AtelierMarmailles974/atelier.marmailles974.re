@@ -5,18 +5,17 @@
     "La base antidérapant élimine les déplacements non souhaités",
     "Adapté à toutes les souris",
     "Dimensions : 28*19*0.5 cm",
-    "Code PROMO Lili974",
     "30 Dessins"
   ],
   "pricing": {
-    "coop": 5.5,
+    "coop": 5,
     "min": 9,
     "max": 12,
     "selected": 10
   },
   "isVisible": true,
-  "isDiscount": true,
-  "order": 14,
+  "isDiscount": false,
+  "order": 12,
   "date": "2018-09-09T19:38:55+04:00",
   "colorings": [
     {
@@ -36,6 +35,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.tapis_de_souris2.jpg"
+    "src": "/images/product.promo.07.jpg"
   }
 }
