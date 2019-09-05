@@ -8,14 +8,14 @@
     "200 Dessins"
   ],
   "pricing": {
-    "coop": 5,
+    "coop": 5.5,
     "min": 9,
     "max": 15,
     "selected": 10
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 17,
+  "order": 32,
   "date": "2019-02-08T17:48:23+04:00",
   "colorings": [
     {
@@ -39,7 +39,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Les expressions kréole réunionnais",
   "title": "TORCHON \" Oté ! Koman i lé ? \"",
   "images": [
