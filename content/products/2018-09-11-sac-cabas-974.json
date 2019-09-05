@@ -2,16 +2,17 @@
   "extras": [
     "Sac Cabas en Polypropylène",
     "Dimensions : 47x37x14 cm",
-    "150 Dessins"
+    "150 Dessins",
+    "Code Promo 600"
   ],
   "pricing": {
-    "coop": 6,
+    "coop": 6.5,
     "min": 8,
     "max": 12,
     "selected": 10
   },
   "isVisible": true,
-  "isDiscount": false,
+  "isDiscount": true,
   "order": 7,
   "date": "2018-09-11T03:08:53+04:00",
   "colorings": [
@@ -26,7 +27,7 @@
     }
   ],
   "drawings": "150",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Faite vos courses aux couleurs de la Réunion !",
   "title": "SAC Cabas 974",
   "images": [
@@ -41,6 +42,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.sac_cabas.jpg"
+    "src": "/images/product.promo.01.jpg"
   }
 }
