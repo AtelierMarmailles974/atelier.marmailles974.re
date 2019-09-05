@@ -3,12 +3,12 @@
     "Sac Cabas en Polypropylène",
     "Dimensions : 47x37x14 cm",
     "150 Dessins",
-    "Code Promo 600"
+    "Code Promo 650"
   ],
   "pricing": {
-    "coop": 6.5,
-    "min": 8,
-    "max": 12,
+    "coop": 6,
+    "min": 9,
+    "max": 14,
     "selected": 10
   },
   "isVisible": true,
