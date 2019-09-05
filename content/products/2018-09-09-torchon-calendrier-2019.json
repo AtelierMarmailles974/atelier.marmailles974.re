@@ -4,11 +4,12 @@
     "Couture des quatre bords",
     "Finition Premium",
     "Dimensions : 70x47 cm",
-    "200 Dessins"
+    "200 Dessins",
+    "En cours de création"
   ],
   "pricing": {
-    "coop": 5,
-    "min": 8,
+    "coop": 5.5,
+    "min": 9,
     "max": 14,
     "selected": 10
   },
@@ -37,7 +38,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": false,
+  "isNew": true,
   "subtitle": "Spécial Fin d'Année",
   "title": "TORCHON \" Calendrier 2019 \"",
   "images": [
