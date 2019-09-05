@@ -33,17 +33,18 @@
     {
       "description": "Calendrier 2020",
       "colors": [
-        "#04f81b"
+        "#04f81b",
+        "#f60ffe"
       ]
     }
   ],
   "drawings": "200",
   "isNew": true,
   "subtitle": "Spécial Fin d'Année",
-  "title": "TORCHON \" Calendrier 2019 \"",
+  "title": "TORCHON \" Calendrier 2020 \"",
   "images": [
     {
-      "src": "/images/product.calendrier19.jpg"
+      "src": "/images/product.torchon_calendrier_2020.01.jpg"
     }
   ],
   "image": {
