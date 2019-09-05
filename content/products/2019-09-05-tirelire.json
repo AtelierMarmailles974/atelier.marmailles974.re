@@ -1,0 +1,41 @@
+{
+  "extras": [
+    "Tirelire en céramique personnalisée",
+    "Dimension 9x26 cm",
+    "Boite Kdo Offerte",
+    "De 1 à 30 Dessins"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 10,
+    "max": 15,
+    "selected": 12
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 3,
+  "date": "2019-09-05T16:05:14+04:00",
+  "colorings": [
+    {
+      "description": "Tirelire",
+      "colors": [
+        "#ffffff"
+      ]
+    },
+    {
+      "description": "Choisissez parmi nos suggestions !"
+    }
+  ],
+  "drawings": "30",
+  "isNew": true,
+  "subtitle": "Un sou est un sou et il est précieux de le garder dans sa tirelire.",
+  "title": "TIRELIRE",
+  "images": [
+    {
+      "src": "/images/product.tirelire.01.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.promo.19.jpg"
+  }
+}
