@@ -10,7 +10,7 @@
   "pricing": {
     "coop": 6,
     "min": 9,
-    "max": 14,
+    "max": 15,
     "selected": 10
   },
   "isVisible": true,
@@ -29,7 +29,7 @@
     }
   ],
   "drawings": "30",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Idéal pour des projets de classes !",
   "title": "MUG Panoramique + Dessins",
   "images": [
