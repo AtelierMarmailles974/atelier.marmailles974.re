@@ -5,7 +5,8 @@
     "Finition Premium",
     "Dimension : 29x38 cm",
     "75 Dessins au recto",
-    "150 Dessins recto/verso"
+    "150 Dessins recto/verso",
+    "Code Promo 6.00"
   ],
   "pricing": {
     "coop": 6.5,
@@ -15,7 +16,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 11,
+  "order": 10,
   "date": "2018-09-09T16:35:31+04:00",
   "colorings": [
     {
