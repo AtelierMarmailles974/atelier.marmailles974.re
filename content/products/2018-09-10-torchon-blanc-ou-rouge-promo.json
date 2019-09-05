@@ -6,13 +6,13 @@
     "Dimension : 70x47 cm",
     "Crochet d'accroche Offert",
     "300 Dessins",
-    "Code Promo 450"
+    "Code Promo 500"
   ],
   "pricing": {
-    "coop": 5,
+    "coop": 4,
     "min": 9,
     "max": 14,
-    "selected": 9
+    "selected": 10
   },
   "isVisible": true,
   "isDiscount": true,
