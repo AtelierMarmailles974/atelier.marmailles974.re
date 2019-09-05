@@ -15,7 +15,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 19,
+  "order": 31,
   "date": "2019-02-08T18:16:55+04:00",
   "colorings": [
     {
@@ -39,7 +39,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Les Savates Deux Doigts 974",
   "title": "TORCHON \" Les Savates \"",
   "images": [
