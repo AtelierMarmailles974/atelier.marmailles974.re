@@ -15,7 +15,7 @@
   },
   "isVisible": true,
   "isDiscount": false,
-  "order": 5,
+  "order": 30,
   "date": "2018-07-12T10:08:57+04:00",
   "colorings": [
     {
@@ -40,7 +40,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Spécial Kermesse",
   "title": "TORCHON \" Vive les vacances \"",
   "images": [
