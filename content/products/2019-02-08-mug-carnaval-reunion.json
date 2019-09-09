@@ -13,9 +13,9 @@
     "max": 15,
     "selected": 10
   },
-  "isVisible": false,
+  "isVisible": true,
   "isDiscount": false,
-  "order": 1,
+  "order": 36,
   "date": "2019-02-08T12:21:36+04:00",
   "colorings": [
     {
@@ -25,7 +25,7 @@
       ]
     }
   ],
-  "drawings": "0",
+  "drawings": "1",
   "isNew": true,
   "subtitle": "Le 05 Mars c'est Mardi Gras !!!",
   "title": "MUG Photo du Carnaval de la Réunion",
@@ -44,6 +44,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.carnaval.01.jpg"
+    "src": "/images/product.promo.23.jpg"
   }
 }
