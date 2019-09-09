@@ -5,7 +5,8 @@
     "Dimension 9*26 cm",
     "Contenance 30 cl",
     "Boite valise de protection Offerte",
-    "1 Photo"
+    "1 Photo",
+    "Le nouveau en cours de réalisation !!!"
   ],
   "pricing": {
     "coop": 6.5,
@@ -26,7 +27,7 @@
     }
   ],
   "drawings": "1",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Le 25 Février c'est Mardi Gras !!!",
   "title": "MUG + Photo du Carnaval de la Réunion",
   "images": [
