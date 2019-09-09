@@ -1,0 +1,40 @@
+{
+  "extras": [
+    "Céramique blanche",
+    "Convient au micro onde",
+    "Dimension : 9x26 cm",
+    "Contenance 30 cl",
+    "Boite valisette de protection Offerte",
+    "1 Photo"
+  ],
+  "pricing": {
+    "coop": 6.5,
+    "min": 10,
+    "max": 15,
+    "selected": 9
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 5,
+  "date": "2019-09-09T09:47:45+04:00",
+  "colorings": [
+    {
+      "description": "Mug",
+      "colors": [
+        "#ffffff"
+      ]
+    }
+  ],
+  "drawings": "1",
+  "isNew": true,
+  "subtitle": "Le sourire de votre petit monstre d'Amour !",
+  "title": "Mug \"Halloween\" + Photo",
+  "images": [
+    {
+      "src": "/images/product.mug_dessins.6.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.promo.17.jpg"
+  }
+}
