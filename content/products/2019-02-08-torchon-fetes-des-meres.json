@@ -13,9 +13,9 @@
     "max": 15,
     "selected": 7
   },
-  "isVisible": false,
+  "isVisible": true,
   "isDiscount": false,
-  "order": 3,
+  "order": 34,
   "date": "2019-02-08T15:21:01+04:00",
   "colorings": [
     {
@@ -49,6 +49,6 @@
     }
   ],
   "image": {
-    "src": "/images/product.promo.09.jpg"
+    "src": "/images/product.promo.21.jpg"
   }
 }
