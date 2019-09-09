@@ -1,0 +1,40 @@
+{
+  "extras": [
+    "Céramique blanche",
+    "Convient au micro onde",
+    "Dimension 9x29 cm",
+    "Contenance 30 cl",
+    "Boite valisette de protection Offerte",
+    "30 Dessins"
+  ],
+  "pricing": {
+    "coop": 6,
+    "min": 10,
+    "max": 15,
+    "selected": 9
+  },
+  "isVisible": true,
+  "isDiscount": false,
+  "order": 5,
+  "date": "2019-09-09T09:58:53+04:00",
+  "colorings": [
+    {
+      "description": "Mug",
+      "colors": [
+        "#ffffff"
+      ]
+    }
+  ],
+  "drawings": "30",
+  "isNew": true,
+  "subtitle": "Monstres, Citrouilles, Fantômes, Sorcières... Pour des friandises ou des bêtises ! ",
+  "title": "Mug \"HALLOWEEN\" + Dessins",
+  "images": [
+    {
+      "src": "/images/product.mug_dessins.05.jpg"
+    }
+  ],
+  "image": {
+    "src": "/images/product.promo.16.jpg"
+  }
+}
