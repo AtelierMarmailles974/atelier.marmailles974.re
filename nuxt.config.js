@@ -67,7 +67,7 @@ module.exports = {
       },
     ],
   },
-  googleMaps: { key: 'AIzaSyDc6WY-88kRxrIg7Llk1NXmmZQO_rMNqVE' },
+  googleMaps: { key: 'AIzaSyCz179NmFWowTkO3IE5nzCkpZe_Z8oSc0Q' },
   head: {
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   },
