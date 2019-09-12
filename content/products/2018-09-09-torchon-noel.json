@@ -12,8 +12,8 @@
     "max": 14,
     "selected": 10
   },
-  "isVisible": false,
-  "isDiscount": true,
+  "isVisible": true,
+  "isDiscount": false,
   "order": 40,
   "date": "2018-09-09T21:05:12+04:00",
   "colorings": [
@@ -31,7 +31,7 @@
     }
   ],
   "drawings": "200",
-  "isNew": true,
+  "isNew": false,
   "subtitle": "Spécial \"NOËL\"",
   "title": "TORCHON Noël",
   "images": [
