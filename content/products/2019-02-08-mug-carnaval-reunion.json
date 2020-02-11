@@ -32,16 +32,13 @@
   "title": "MUG - CARNAVAL + Photo",
   "images": [
     {
-      "src": "/images/product.mug_carnaval.02.jpg"
-    },
-    {
-      "src": "/images/product.mug_carnaval.03.jpg"
-    },
-    {
-      "src": "/images/product.mug_carnaval.05.jpg"
-    },
-    {
       "src": "/images/product.mug_carnaval.04.jpg"
+    },
+    {
+      "src": "/images/product.mug_carnaval.06.jpg"
+    },
+    {
+      "src": "/images/product.mug_carnaval.07.jpg"
     }
   ],
   "image": {
